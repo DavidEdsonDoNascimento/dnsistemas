@@ -1,27 +1,29 @@
+import type { Metadata } from 'next'
 import './globals.css'
-import { ReactNode } from 'react'
-import ThemeRegistry from '@/theme/ThemeRegistry'
-import { Inter } from 'next/font/google'
-import { Header } from '@/components/Header'
+// import ThemeRegistry from '@/theme/ThemeRegistry'
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-})
+import '@/assets/vendor/bootstrap/css/bootstrap.min.css'
+import '@/assets/vendor/bootstrap-icons/bootstrap-icons.css'
+// import '@/assets/vendor/aos/aos.css'
+import '@/assets/vendor/swiper/swiper-bundle.min.css'
+import '@/assets/vendor/glightbox/css/glightbox.min.css'
+import '@/assets/css/main.css'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'DN Sistemas Corporativos',
-  description: 'Soluções Digitais Corporativas sob Medida',
+  description: 'Soluções em sistemas corporativos, sites institucionais e aplicações empresariais.',
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
-        <ThemeRegistry>
-          <Header />
-          {children}
-        </ThemeRegistry>
+      <body>
+        {/* <ThemeRegistry>{children}</ThemeRegistry> */}
+        {children}
       </body>
     </html>
   )
