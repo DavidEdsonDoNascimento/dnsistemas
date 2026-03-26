@@ -4212,3 +4212,271 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+/* ===== DN SISTEMAS OVERRIDES - VERSÃO ESTÁVEL ===== */
+
+:root {
+  --default-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --heading-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --nav-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --background-color: #f4f7fb;
+  --default-color: #475569;
+  --heading-color: #0a2342;
+  --accent-color: #1d4ed8;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+
+  --nav-color: rgba(255, 255, 255, 0.78);
+  --nav-hover-color: #ffffff;
+  --nav-mobile-background-color: #0a2342;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #0f172a;
+  --nav-dropdown-hover-color: #1d4ed8;
+}
+
+/* base geral */
+body {
+  background-color: #f4f7fb;
+  color: #475569;
+}
+
+section,
+.section {
+  background-color: #f4f7fb;
+  color: #475569;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title h2 {
+  color: #0a2342;
+}
+
+.section-title p,
+p {
+  color: #64748b;
+}
+
+/* header */
+.header {
+  --background-color: rgba(255, 255, 255, 0);
+  --surface-color: rgba(10, 35, 66, 0.92);
+}
+
+.header .header-container {
+  background: rgba(10, 35, 66, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18);
+}
+
+.header .logo h1,
+.header .logo .sitename,
+.header .logo small {
+  color: #ffffff !important;
+}
+
+.header .btn-getstarted,
+.header .btn-getstarted:focus {
+  background: #1d4ed8;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 10px 18px;
+  font-weight: 700;
+  box-shadow: 0 12px 24px rgba(29, 78, 216, 0.24);
+}
+
+.header .btn-getstarted:hover,
+.header .btn-getstarted:focus:hover {
+  background: #123765;
+  color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .navmenu a,
+  .navmenu a:focus {
+    color: rgba(255, 255, 255, 0.78);
+    font-weight: 500;
+  }
+
+  .navmenu li:hover > a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: #ffffff;
+  }
+
+  .navmenu > ul > li > a:before {
+    background-color: #4f7cff;
+  }
+}
+
+@media (max-width: 1199px) {
+  .mobile-nav-toggle {
+    color: #ffffff;
+  }
+
+  .navmenu ul {
+    background-color: #0a2342;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: #ffffff;
+  }
+}
+
+/* hero */
+.hero {
+  background: linear-gradient(135deg, #07182f 0%, #0a2342 55%, #123765 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(59, 130, 246, 0.18), transparent 28%),
+    radial-gradient(circle at 82% 30%, rgba(29, 78, 216, 0.12), transparent 24%);
+  pointer-events: none;
+}
+
+.hero .hero-content,
+.hero .hero-image,
+.hero .hero-visual,
+.hero .hero-bg-elements {
+  position: relative;
+  z-index: 2;
+}
+
+.hero .hero-content h1 {
+  color: #ffffff !important;
+}
+
+.hero .hero-content p {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.hero .company-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero .accent-text {
+  color: #93c5fd !important;
+}
+
+.hero .hero-buttons .btn.btn-primary {
+  background: #ffffff;
+  color: #0a2342;
+  border-color: #ffffff;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.hero .hero-buttons .btn.btn-primary:hover {
+  background: #eaf1ff;
+  color: #0a2342;
+  border-color: #eaf1ff;
+}
+
+.hero .hero-buttons .btn.btn-link {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* about / services / contact */
+.about.section,
+.services.section,
+.contact.section {
+  background-color: #f4f7fb !important;
+}
+
+.about .content h3,
+.services h3,
+.contact h3 {
+  color: #0a2342 !important;
+}
+
+.about .content p,
+.services p,
+.contact p {
+  color: #64748b !important;
+}
+
+/* cards */
+.services .service-item,
+.contact .info-wrap,
+.contact .php-email-form {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
+}
+
+.services .service-item .icon {
+  background: rgba(29, 78, 216, 0.10) !important;
+  color: #1d4ed8 !important;
+  border-radius: 16px;
+}
+
+.services .service-item h3,
+.contact .info-wrap h3,
+.contact .php-email-form h3 {
+  color: #0a2342 !important;
+}
+
+.services .service-item p,
+.contact .info-wrap p,
+.contact .php-email-form p {
+  color: #64748b !important;
+}
+
+/* formulário */
+.form-control {
+  border-radius: 14px !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: none !important;
+  color: #0f172a !important;
+  background-color: #ffffff !important;
+}
+
+.form-control::placeholder {
+  color: #94a3b8 !important;
+}
+
+.form-control:focus {
+  border-color: #1d4ed8 !important;
+  box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.12) !important;
+}
+
+/* footer */
+.footer {
+  background-color: #07182f !important;
+  color: rgba(255, 255, 255, 0.78) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer p,
+.footer span,
+.footer strong,
+.footer a {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
