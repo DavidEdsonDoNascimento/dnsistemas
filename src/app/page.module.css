@@ -1,13 +1,13 @@
 .page {
-  --background: #fafafa;
-  --foreground: #fff;
+  --background: var(--dn-body-bg);
+  --foreground: var(--dn-service-card-bg);
 
-  --text-primary: #000;
-  --text-secondary: #666;
+  --text-primary: var(--dn-primary);
+  --text-secondary: var(--dn-muted);
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
+  --button-primary-hover: color-mix(in srgb, var(--dn-secondary), black 12%);
+  --button-secondary-hover: var(--dn-glass-bg);
+  --button-secondary-border: var(--dn-border);
 
   display: flex;
   min-height: 100vh;
@@ -122,20 +122,3 @@ a.secondary {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-
-  .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
-}

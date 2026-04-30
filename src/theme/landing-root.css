@@ -1,0 +1,82 @@
+/**
+ * Fallback SSR + primeira pintura antes do cliente.
+ * Valores devem coincidir com `landingTokens.ts` / `getLandingCssVariables`.
+ */
+:root {
+  color-scheme: dark;
+
+  --dn-primary: #ffffff;
+  --dn-secondary: #2563eb;
+  --dn-muted: #a1a1aa;
+  --dn-border: rgba(255, 255, 255, 0.08);
+  --dn-success: #22c55e;
+  --dn-error: #ef4444;
+  --dn-body-bg: #0a0a0a;
+  --dn-gradient: linear-gradient(135deg, #0a0a0a 0%, #0b0f14 60%, #000000 100%);
+  --dn-gradient-soft: linear-gradient(180deg, #0a0a0a 0%, #0b0f14 100%);
+  --dn-gradient-cta: linear-gradient(135deg, #0a0a0a 0%, #0b0f14 60%, #000000 100%);
+  --dn-gradient-glow: radial-gradient(
+      circle at 20% 20%,
+      rgba(37, 99, 235, 0.15),
+      transparent 25%
+    ),
+    radial-gradient(circle at 80% 30%, rgba(37, 99, 235, 0.12), transparent 22%);
+  --dn-primary-dark: #050505;
+  --dn-header-bg: rgba(10, 10, 10, 0.75);
+  --dn-header-backdrop-filter: blur(14px);
+  --dn-footer-muted: rgba(255, 255, 255, 0.6);
+  --dn-footer-divider: rgba(255, 255, 255, 0.08);
+  --dn-nav-icon: #ffffff;
+  --dn-overlay-strong: rgba(255, 255, 255, 0.95);
+  --dn-overlay-muted: rgba(255, 255, 255, 0.7);
+  --dn-overlay-medium: rgba(255, 255, 255, 0.6);
+  --dn-glass-border: rgba(255, 255, 255, 0.08);
+  --dn-glass-border-ghost: rgba(255, 255, 255, 0.12);
+  --dn-glass-bg: rgba(255, 255, 255, 0.03);
+  --dn-glass-bg-stat: rgba(255, 255, 255, 0.02);
+  --dn-glass-border-weak: rgba(255, 255, 255, 0.04);
+  --dn-chip-blue-bg: rgba(37, 99, 235, 0.12);
+  --dn-icon-blue-tint: rgba(37, 99, 235, 0.18);
+  --dn-service-card-bg: #0b0f14;
+  --dn-cta-muted: rgba(255, 255, 255, 0.7);
+  --dn-header-nav: #e4e4e7;
+  --dn-shadow-header-cta: 0 14px 30px rgba(29, 78, 216, 0.24);
+  --dn-shadow-hero-aside: 0 30px 80px rgba(2, 8, 23, 0.34);
+  --dn-shadow-about-img: 0 24px 70px rgba(15, 23, 42, 0.14);
+  --dn-shadow-card: 0 20px 60px rgba(0, 0, 0, 0.6);
+  --dn-shadow-cta-ribbon: 0 30px 80px rgba(7, 24, 47, 0.18);
+  --dn-radius-sm: 14px;
+  --dn-radius-md: 18px;
+  --dn-radius-lg: 20px;
+  --dn-radius-xl: 24px;
+  --dn-radius-hero: 26px;
+  --dn-radius-xxl: 28px;
+  --dn-radius-pill: 999px;
+  --dn-section-y: 96px;
+  --dn-hero-pt: 170px;
+  --dn-hero-pb: 110px;
+  --dn-carousel-muted: rgba(255, 255, 255, 0.85);
+  --dn-carousel-g1: linear-gradient(135deg, #0a0a0a 0%, #0b0f14 100%);
+  --dn-carousel-g2: linear-gradient(135deg, #0b0f14 0%, #050505 100%);
+  --dn-carousel-g3: linear-gradient(135deg, #0a0a0a 0%, #0b0f14 55%, #050505 100%);
+  --dn-shadow-carousel-panel: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --dn-shadow-carousel-heavy: 0 30px 60px rgba(0, 0, 0, 0.5);
+  --dn-shadow-carousel-heavy-sm: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --dn-shadow-carousel-soft: 0 15px 35px rgba(0, 0, 0, 0.4);
+  --dn-shadow-carousel-bottom: 0 10px 25px rgba(0, 0, 0, 0.35);
+  --dn-on-light-surface: #0a0a0a;
+
+  --dn-star: #fbbf24;
+
+  --bs-body-bg: var(--dn-body-bg);
+  --bs-body-color: var(--dn-muted);
+  --bs-emphasis-color: var(--dn-primary);
+  --bs-secondary-color: rgba(161, 161, 170, 0.75);
+  --bs-heading-color: var(--dn-primary);
+  --bs-link-color: var(--dn-secondary);
+  --bs-link-hover-color: color-mix(in srgb, var(--dn-secondary), white 15%);
+  --bs-border-color: var(--dn-border);
+  --bs-primary: var(--dn-secondary);
+  --bs-primary-rgb: 37, 99, 235;
+  --bs-secondary: rgba(161, 161, 170, 0.6);
+}

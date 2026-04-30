@@ -15,7 +15,7 @@
     position: fixed;
     top: calc(50% - 30px);
     left: calc(50% - 30px);
-    border: 6px solid #ffffff;
+    border: 6px solid var(--dn-glass-border);
     border-color: var(--accent-color) transparent var(--accent-color) transparent;
     border-radius: 50%;
     width: 60px;

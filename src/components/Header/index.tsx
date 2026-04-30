@@ -1,58 +1,54 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
-import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material'
+import { AppBar, Toolbar, Button, Box } from '@mui/material'
+import lc from '@/theme/landing.module.css'
 
 export function Header() {
   return (
-    <AppBar 
-      position="sticky" 
+    <AppBar
+      position="sticky"
       elevation={0}
-      sx={{
-        backgroundColor: '#FFFFFF',
-        borderBottom: '1px solid #E5E7EB'
-      }}
+      sx={(theme) => ({
+        backgroundColor: theme.landing.palette.headerBackdrop,
+        backdropFilter: theme.landing.header.backdropFilter,
+        borderBottom: `1px solid ${theme.landing.palette.border}`,
+      })}
     >
       <Toolbar sx={{ justifyContent: 'space-between' }}>
-        
-        {/* Logo */}
-        <Typography 
-          variant="h6" 
-          sx={{ 
-            color: 'primary.main', 
-            fontWeight: 700 
-          }}
-        >
-          DN Sistemas Corporativos
-        </Typography>
+        <Link href="/" className={lc.landingPlainLink}>
+          <Image
+            src="/antero_logo_header_croppezd.png"
+            alt="Antero software sob medida"
+            width={280}
+            height={64}
+            priority
+            className={lc.landingLogoImg}
+          />
+        </Link>
 
-        {/* Menu */}
         <Box sx={{ display: 'flex', gap: 4 }}>
-          <Link href="/" style={{ textDecoration: 'none', color: '#1F2937' }}>
+          <Link href="/" className={lc.landingMuiNavLink}>
             Início
           </Link>
-          <Link href="#solucoes" style={{ textDecoration: 'none', color: '#1F2937' }}>
+          <Link href="#solucoes" className={lc.landingMuiNavLink}>
             Soluções
           </Link>
-          <Link href="#metodologia" style={{ textDecoration: 'none', color: '#1F2937' }}>
+          <Link href="#metodologia" className={lc.landingMuiNavLink}>
             Metodologia
           </Link>
-          <Link href="#projetos" style={{ textDecoration: 'none', color: '#1F2937' }}>
+          <Link href="#projetos" className={lc.landingMuiNavLink}>
             Projetos
           </Link>
-          <Link href="/orcamento" style={{ textDecoration: 'none', color: '#1F2937' }}>
+          <Link href="/orcamento" className={lc.landingMuiNavLink}>
             Contato
           </Link>
         </Box>
 
-        {/* CTA */}
-        <Button 
-          variant="contained" 
-          color="primary"
-        >
+        <Button variant="contained" color="primary">
           Solicitar Análise
         </Button>
-
       </Toolbar>
     </AppBar>
   )

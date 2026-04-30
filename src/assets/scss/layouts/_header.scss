@@ -4,7 +4,7 @@
 --------------------------------------------------------------*/
 .header {
   --background-color: rgba(255, 255, 255, 0);
-  --surface-color: #1b1933;
+  --surface-color: var(--dn-service-card-bg);
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;

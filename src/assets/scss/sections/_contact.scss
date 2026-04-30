@@ -21,7 +21,7 @@
       left: 0;
       right: 0;
       height: 4px;
-      background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6366f1 30%));
+      background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 25%));
     }
 
     .form-header {
@@ -31,7 +31,7 @@
       .header-icon {
         width: 60px;
         height: 60px;
-        background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6366f1 30%));
+        background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 25%));
         border-radius: 18px;
         display: flex;
         align-items: center;
@@ -91,7 +91,7 @@
 
       .submit-btn {
         width: 100%;
-        background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6366f1 30%));
+        background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 25%));
         color: var(--contrast-color);
         border: none;
         padding: 16px 30px;

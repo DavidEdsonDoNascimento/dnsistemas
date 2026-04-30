@@ -25,7 +25,7 @@
     .icon-wrapper {
       width: 80px;
       height: 80px;
-      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 30%));
+      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 30%));
       border-radius: 20px;
       display: flex;
       align-items: center;
@@ -168,7 +168,7 @@
         border: 2px solid transparent;
 
         &.btn-primary {
-          background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 30%));
+          background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 30%));
           color: var(--contrast-color);
           border-color: var(--accent-color);
 

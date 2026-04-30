@@ -19,39 +19,37 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Global Colors — valores via --dn-* (landing-root.css + ThemeRegistry). */
 :root { 
-  --background-color: #05071e; /* Background color for the entire website, including individual sections */
-  --default-color: #e8e7f7; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #524dd3; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #131428; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: var(--dn-body-bg);
+  --default-color: var(--dn-muted);
+  --heading-color: var(--dn-primary);
+  --accent-color: var(--dn-secondary);
+  --surface-color: var(--dn-service-card-bg);
+  --contrast-color: var(--dn-primary);
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Nav Menu — alinhado ao design system (--dn-*). */
 :root {
-  --nav-color: #c8c6e3;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #03051f; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #1f2240; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #c8c6e3; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: var(--dn-header-nav);
+  --nav-hover-color: var(--dn-primary);
+  --nav-mobile-background-color: var(--dn-body-bg);
+  --nav-dropdown-background-color: var(--dn-service-card-bg);
+  --nav-dropdown-color: var(--dn-muted);
+  --nav-dropdown-hover-color: var(--dn-primary);
 }
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #0c114a;
-  --surface-color: #131b76;
+  --background-color: var(--dn-service-card-bg);
+  --surface-color: var(--dn-service-card-bg);
 }
 
 .dark-background {
-  --background-color: #01020e;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
+  --background-color: var(--dn-body-bg);
+  --default-color: var(--dn-primary);
+  --heading-color: var(--dn-primary);
+  --surface-color: var(--dn-service-card-bg);
+  --contrast-color: var(--dn-primary);
 }
 
 /* Smooth scroll */
@@ -93,8 +91,8 @@ h6 {
 ------------------------------*/
 .php-email-form .error-message {
   display: none;
-  background: #df1529;
-  color: #ffffff;
+  background: var(--dn-error);
+  color: var(--dn-primary);
   text-align: left;
   padding: 15px;
   margin-bottom: 24px;
@@ -103,8 +101,8 @@ h6 {
 
 .php-email-form .sent-message {
   display: none;
-  color: #ffffff;
-  background: #059652;
+  color: var(--dn-primary);
+  background: var(--dn-success);
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -146,7 +144,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   --background-color: rgba(255, 255, 255, 0);
-  --surface-color: #1b1933;
+  --surface-color: var(--dn-service-card-bg);
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;
@@ -460,7 +458,7 @@ h6 {
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
+    color: var(--dn-primary);
     position: absolute;
     font-size: 32px;
     top: 15px;
@@ -617,7 +615,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #ffffff;
+  border: 6px solid var(--dn-glass-border);
   border-color: var(--accent-color) transparent var(--accent-color) transparent;
   border-radius: 50%;
   width: 60px;
@@ -1194,7 +1192,7 @@ section,
   width: 80px;
   height: 80px;
   margin: 0 auto 25px;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 30%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 30%));
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -1211,7 +1209,7 @@ section,
   position: absolute;
   top: -10px;
   right: 20px;
-  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  background: linear-gradient(135deg, var(--dn-secondary), color-mix(in srgb, var(--dn-secondary), var(--dn-primary) 35%));
   color: var(--contrast-color);
   padding: 6px 16px;
   border-radius: 20px;
@@ -1295,7 +1293,7 @@ section,
 }
 
 .services .services-cta .btn {
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 30%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 30%));
   border: none;
   border-radius: 50px;
   padding: 14px 32px;
@@ -1416,7 +1414,7 @@ section,
 }
 
 .portfolio .portfolio-filters li.filter-active {
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #4338ca 20%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 22%));
   color: var(--contrast-color);
   border-color: var(--accent-color);
   box-shadow: 0 8px 30px color-mix(in srgb, var(--accent-color), transparent 70%);
@@ -1530,7 +1528,7 @@ section,
   gap: 4px;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #fbbf24;
+  color: var(--dn-star);
 }
 
 .portfolio .portfolio-wrapper .portfolio-content .portfolio-meta .project-rating i {
@@ -1613,7 +1611,7 @@ section,
 }
 
 .portfolio .portfolio-cta .cta-buttons .btn.btn-primary {
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #4338ca 20%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 22%));
   color: var(--contrast-color);
   border: none;
   box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
@@ -1665,7 +1663,7 @@ section,
 .why-us .feature-card .icon-wrapper {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 30%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 30%));
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -1808,7 +1806,7 @@ section,
 }
 
 .why-us .feature-content .cta-wrapper .btn.btn-primary {
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 30%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 30%));
   color: var(--contrast-color);
   border-color: var(--accent-color);
 }
@@ -1900,7 +1898,7 @@ section,
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 50%));
+  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 45%));
   border-radius: 24px 24px 0 0;
 }
 
@@ -1953,7 +1951,7 @@ section,
 }
 
 .testimonials .rating i {
-  color: #fbbf24;
+  color: var(--dn-star);
   font-size: 14px;
 }
 
@@ -1969,7 +1967,7 @@ section,
   right: 0;
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 50%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 45%));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2024,14 +2022,14 @@ section,
 }
 
 .testimonials .verified-badge i {
-  color: #10b981;
+  color: var(--dn-success);
   font-size: 16px;
 }
 
 .testimonials .verified-badge span {
   font-size: 12px;
   font-weight: 600;
-  color: #10b981;
+  color: var(--dn-success);
 }
 
 .testimonials .swiper-pagination {
@@ -2552,7 +2550,7 @@ section,
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6366f1 30%));
+  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 25%));
 }
 
 .contact .contact-form-card .form-header {
@@ -2563,7 +2561,7 @@ section,
 .contact .contact-form-card .form-header .header-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6366f1 30%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 25%));
   border-radius: 18px;
   display: flex;
   align-items: center;
@@ -2621,7 +2619,7 @@ section,
 
 .contact .contact-form-card .php-email-form .submit-btn {
   width: 100%;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6366f1 30%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 25%));
   color: var(--contrast-color);
   border: none;
   padding: 16px 30px;
@@ -3676,7 +3674,7 @@ section,
 }
 
 .terms-of-service .tos-content .content-section .prohibited-list .prohibited-item i {
-  color: #dc3545;
+  color: var(--dn-error);
   font-size: 1.2rem;
 }
 
@@ -3963,7 +3961,7 @@ section,
 
   .privacy .privacy-header {
     text-align: left;
-    border-bottom: 1pt solid #000;
+    border-bottom: 1pt solid black;
     padding-bottom: 20pt;
     margin-bottom: 30pt;
   }
@@ -3988,7 +3986,7 @@ section,
   }
 
   .privacy .contact-details {
-    border: 1pt solid #000;
+    border: 1pt solid black;
     padding: 15pt;
   }
 }
@@ -4212,271 +4210,33 @@ section,
 .starter-section {
   /* Add your styles here */
 }
-/* ===== DN SISTEMAS OVERRIDES - VERSÃO ESTÁVEL ===== */
-
+/* ===== DN Sistemas — apenas fontes; cores ficam nos :root (--dn-* + aliases) ===== */
 :root {
   --default-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --heading-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --nav-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
-  --background-color: #f4f7fb;
-  --default-color: #475569;
-  --heading-color: #0a2342;
-  --accent-color: #1d4ed8;
-  --surface-color: #ffffff;
-  --contrast-color: #ffffff;
-
-  --nav-color: rgba(255, 255, 255, 0.78);
-  --nav-hover-color: #ffffff;
-  --nav-mobile-background-color: #0a2342;
-  --nav-dropdown-background-color: #ffffff;
-  --nav-dropdown-color: #0f172a;
-  --nav-dropdown-hover-color: #1d4ed8;
-}
-
-/* base geral */
-body {
-  background-color: #f4f7fb;
-  color: #475569;
-}
-
-section,
-.section {
-  background-color: #f4f7fb;
-  color: #475569;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.section-title h2 {
-  color: #0a2342;
-}
-
-.section-title p,
-p {
-  color: #64748b;
-}
-
-/* header */
-.header {
-  --background-color: rgba(255, 255, 255, 0);
-  --surface-color: rgba(10, 35, 66, 0.92);
-}
-
-.header .header-container {
-  background: rgba(10, 35, 66, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18);
-}
-
-.header .logo h1,
-.header .logo .sitename,
-.header .logo small {
-  color: #ffffff !important;
-}
-
-.header .btn-getstarted,
-.header .btn-getstarted:focus {
-  background: #1d4ed8;
-  color: #ffffff;
-  border-radius: 14px;
-  padding: 10px 18px;
-  font-weight: 700;
-  box-shadow: 0 12px 24px rgba(29, 78, 216, 0.24);
-}
-
-.header .btn-getstarted:hover,
-.header .btn-getstarted:focus:hover {
-  background: #123765;
-  color: #ffffff;
 }
 
 @media (min-width: 1200px) {
-  .navmenu a,
-  .navmenu a:focus {
-    color: rgba(255, 255, 255, 0.78);
-    font-weight: 500;
-  }
-
-  .navmenu li:hover > a,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: #ffffff;
-  }
-
   .navmenu > ul > li > a:before {
-    background-color: #4f7cff;
+    background-color: var(--dn-secondary);
   }
 }
 
-@media (max-width: 1199px) {
-  .mobile-nav-toggle {
-    color: #ffffff;
-  }
-
-  .navmenu ul {
-    background-color: #0a2342;
-  }
-
-  .navmenu a,
-  .navmenu a:focus {
-    color: rgba(255, 255, 255, 0.82);
-  }
-
-  .navmenu a:hover,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: #ffffff;
-  }
-}
-
-/* hero */
-.hero {
-  background: linear-gradient(135deg, #07182f 0%, #0a2342 55%, #123765 100%) !important;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 18% 22%, rgba(59, 130, 246, 0.18), transparent 28%),
-    radial-gradient(circle at 82% 30%, rgba(29, 78, 216, 0.12), transparent 24%);
-  pointer-events: none;
-}
-
-.hero .hero-content,
-.hero .hero-image,
-.hero .hero-visual,
-.hero .hero-bg-elements {
-  position: relative;
-  z-index: 2;
-}
-
-.hero .hero-content h1 {
-  color: #ffffff !important;
-}
-
-.hero .hero-content p {
-  color: rgba(255, 255, 255, 0.82) !important;
-}
-
-.hero .company-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.hero .accent-text {
-  color: #93c5fd !important;
-}
-
-.hero .hero-buttons .btn.btn-primary {
-  background: #ffffff;
-  color: #0a2342;
-  border-color: #ffffff;
-  border-radius: 14px;
-  font-weight: 700;
-}
-
-.hero .hero-buttons .btn.btn-primary:hover {
-  background: #eaf1ff;
-  color: #0a2342;
-  border-color: #eaf1ff;
-}
-
-.hero .hero-buttons .btn.btn-link {
-  color: #ffffff !important;
-  font-weight: 600;
-}
-
-/* about / services / contact */
-.about.section,
-.services.section,
-.contact.section {
-  background-color: #f4f7fb !important;
-}
-
-.about .content h3,
-.services h3,
-.contact h3 {
-  color: #0a2342 !important;
-}
-
-.about .content p,
-.services p,
-.contact p {
-  color: #64748b !important;
-}
-
-/* cards */
-.services .service-item,
-.contact .info-wrap,
-.contact .php-email-form {
-  background: #ffffff !important;
-  border: 1px solid rgba(15, 23, 42, 0.08) !important;
-  border-radius: 24px;
-  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
-}
-
-.services .service-item .icon {
-  background: rgba(29, 78, 216, 0.10) !important;
-  color: #1d4ed8 !important;
-  border-radius: 16px;
-}
-
-.services .service-item h3,
-.contact .info-wrap h3,
-.contact .php-email-form h3 {
-  color: #0a2342 !important;
-}
-
-.services .service-item p,
-.contact .info-wrap p,
-.contact .php-email-form p {
-  color: #64748b !important;
-}
-
-/* formulário */
+/* formulário Bootstrap sob tema escuro quando não há classes landing */
 .form-control {
-  border-radius: 14px !important;
-  border: 1px solid rgba(15, 23, 42, 0.08) !important;
-  box-shadow: none !important;
-  color: #0f172a !important;
-  background-color: #ffffff !important;
+  border-radius: var(--dn-radius-sm, 14px);
+  border: 1px solid var(--dn-border);
+  box-shadow: none;
+  color: var(--dn-primary);
+  background-color: var(--dn-body-bg);
 }
 
 .form-control::placeholder {
-  color: #94a3b8 !important;
+  color: var(--dn-muted);
 }
 
 .form-control:focus {
-  border-color: #1d4ed8 !important;
-  box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.12) !important;
-}
-
-/* footer */
-.footer {
-  background-color: #07182f !important;
-  color: rgba(255, 255, 255, 0.78) !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.footer p,
-.footer span,
-.footer strong,
-.footer a {
-  color: rgba(255, 255, 255, 0.78) !important;
+  border-color: var(--dn-secondary);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--dn-secondary), transparent 80%);
 }

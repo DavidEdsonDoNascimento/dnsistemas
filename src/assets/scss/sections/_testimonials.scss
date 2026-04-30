@@ -27,7 +27,7 @@
       left: 0;
       right: 0;
       height: 4px;
-      background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 50%));
+      background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 45%));
       border-radius: 24px 24px 0 0;
     }
 
@@ -80,7 +80,7 @@
     gap: 2px;
 
     i {
-      color: #fbbf24;
+      color: var(--dn-star);
       font-size: 14px;
     }
   }
@@ -96,7 +96,7 @@
       right: 0;
       width: 48px;
       height: 48px;
-      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #8b5cf6 50%));
+      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--dn-primary) 45%));
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -151,14 +151,14 @@
     gap: 6px;
 
     i {
-      color: #10b981;
+      color: var(--dn-success);
       font-size: 16px;
     }
 
     span {
       font-size: 12px;
       font-weight: 600;
-      color: #10b981;
+      color: var(--dn-success);
     }
   }
 

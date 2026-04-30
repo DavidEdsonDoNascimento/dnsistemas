@@ -1,60 +1,45 @@
 import { createTheme, type Shadows } from '@mui/material/styles'
+import { landingTokens } from './landingTokens'
 
-const baseShadow = '0 16px 40px rgba(15, 23, 42, 0.10)'
+const baseShadow = '0 20px 50px rgba(0, 0, 0, 0.5)'
 
-const shadows: Shadows = [
+const shadows = [
   'none',
-  '0 2px 8px rgba(15, 23, 42, 0.04)',
-  '0 8px 24px rgba(15, 23, 42, 0.06)',
-  '0 12px 32px rgba(15, 23, 42, 0.08)',
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-  baseShadow,
-]
+  '0 2px 8px rgba(0,0,0,0.2)',
+  '0 8px 24px rgba(0,0,0,0.3)',
+  '0 12px 32px rgba(0,0,0,0.4)',
+  ...Array.from({ length: 21 }, () => baseShadow),
+] as Shadows
 
 export const theme = createTheme({
+  landing: landingTokens,
+
   palette: {
-    mode: 'light',
+    mode: 'dark',
+
     primary: {
-      main: '#0A2342',
-      light: '#123765',
-      dark: '#07182F',
-      contrastText: '#FFFFFF',
+      main: landingTokens.palette.accent,
+      contrastText: landingTokens.palette.navIcon,
     },
+
     secondary: {
-      main: '#1D4ED8',
-      light: '#3B82F6',
-      dark: '#1E3A8A',
-      contrastText: '#FFFFFF',
+      main: landingTokens.palette.muted,
+      contrastText: landingTokens.palette.primaryText,
     },
+
     background: {
-      default: '#F4F7FB',
-      paper: '#FFFFFF',
+      default: landingTokens.palette.footerBg,
+      paper: landingTokens.palette.serviceCardBg,
     },
+
     text: {
-      primary: '#0F172A',
-      secondary: '#475569',
+      primary: landingTokens.palette.primaryText,
+      secondary: landingTokens.palette.muted,
     },
-    divider: 'rgba(15, 23, 42, 0.08)',
+
+    divider: 'rgba(255,255,255,0.08)',
   },
+
   typography: {
     fontFamily: [
       'Inter',
@@ -64,39 +49,34 @@ export const theme = createTheme({
       '"Segoe UI"',
       'sans-serif',
     ].join(','),
+
     h1: {
       fontWeight: 800,
-      fontSize: 'clamp(2.4rem, 5vw, 4.4rem)',
-      lineHeight: 1.08,
+      fontSize: 'clamp(2.6rem, 5vw, 4.6rem)',
+      lineHeight: 1.05,
       letterSpacing: '-0.03em',
     },
+
     h2: {
       fontWeight: 700,
-      fontSize: 'clamp(1.9rem, 3vw, 3rem)',
-      lineHeight: 1.15,
-      letterSpacing: '-0.02em',
+      fontSize: 'clamp(2rem, 3vw, 3.2rem)',
+      lineHeight: 1.1,
     },
-    h3: {
-      fontWeight: 700,
-      lineHeight: 1.2,
-      letterSpacing: '-0.01em',
-    },
+
     body1: {
       fontSize: '1rem',
-      lineHeight: 1.75,
+      lineHeight: 1.8,
     },
-    body2: {
-      fontSize: '0.96rem',
-      lineHeight: 1.7,
-    },
+
     button: {
       textTransform: 'none',
       fontWeight: 700,
-      letterSpacing: '-0.01em',
     },
   },
+
   shape: {
-    borderRadius: 18,
+    borderRadius: landingTokens.radius.sm,
   },
+
   shadows,
 })

@@ -1,0 +1,379 @@
+/* Estilos da home — valores via :root definidos em ThemeRegistry (getLandingCssVariables). */
+
+.landingHeader {
+  background: var(--dn-header-bg);
+  backdrop-filter: var(--dn-header-backdrop-filter);
+  border-bottom: 1px solid var(--dn-border);
+}
+
+.landingLogoImg {
+  height: 64px;
+  width: auto;
+  max-width: min(55vw, 300px);
+  object-fit: contain;
+}
+
+.landingNavToggle {
+  color: var(--dn-nav-icon);
+}
+
+.landingHeaderCta {
+  background: var(--dn-secondary);
+  color: var(--dn-nav-icon);
+  border-radius: var(--dn-radius-sm);
+  padding: 12px 18px;
+  font-weight: 700;
+  box-shadow: var(--dn-shadow-header-cta);
+}
+
+.landingHero {
+  background: var(--dn-gradient);
+  padding-top: var(--dn-hero-pt);
+  padding-bottom: var(--dn-hero-pb);
+  position: relative;
+  overflow: hidden;
+}
+
+.landingHeroGlow {
+  position: absolute;
+  inset: 0;
+  background: var(--dn-gradient-glow);
+  pointer-events: none;
+}
+
+.landingBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: var(--dn-radius-pill);
+  background: var(--dn-glass-bg);
+  border: 1px solid var(--dn-glass-border);
+  color: var(--dn-overlay-strong);
+  font-weight: 600;
+}
+
+.landingBadgeRadius {
+  border-radius: 999px;
+}
+
+.landingHeroTitle {
+  color: var(--dn-nav-icon);
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+
+.landingHeroLead {
+  color: var(--dn-overlay-muted);
+  font-size: 1.08rem;
+  max-width: 640px;
+  margin-bottom: 34px;
+}
+
+.landingBtnPrimary {
+  background: var(--dn-secondary);
+  color: var(--dn-nav-icon);
+  border-radius: var(--dn-radius-sm);
+  padding: 14px 22px;
+  font-weight: 800;
+}
+
+.landingBtnGhost {
+  background: transparent;
+  color: var(--dn-nav-icon);
+  border: 1px solid var(--dn-glass-border-ghost);
+  border-radius: var(--dn-radius-sm);
+  padding: 14px 22px;
+  font-weight: 700;
+}
+
+.landingStatCard {
+  padding: 18px 20px;
+  border-radius: var(--dn-radius-md);
+  background: var(--dn-glass-bg);
+  border: 1px solid var(--dn-glass-border-weak);
+}
+
+.landingStatTitle {
+  color: var(--dn-nav-icon);
+  display: block;
+  font-size: 22px;
+}
+
+.landingStatDesc {
+  color: var(--dn-overlay-medium);
+}
+
+.landingHeroVisual {
+  background: var(--dn-glass-bg-stat);
+  border: 1px solid var(--dn-glass-border);
+  border-radius: var(--dn-radius-xxl);
+  padding: 22px;
+  box-shadow: var(--dn-shadow-hero-aside);
+}
+
+.landingHeroVisualImg {
+  border-radius: var(--dn-radius-lg);
+}
+
+.landingSection {
+  padding: var(--dn-section-y) 0;
+}
+
+.landingSectionSoft {
+  padding: var(--dn-section-y) 0;
+  background: var(--dn-gradient-soft);
+}
+
+.landingAboutFigure {
+  position: relative;
+}
+
+.landingAboutImg {
+  border-radius: var(--dn-radius-hero);
+  box-shadow: var(--dn-shadow-about-img);
+}
+
+.landingAboutContent {
+  max-width: 620px;
+}
+
+.landingEyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 8px 14px;
+  border-radius: var(--dn-radius-pill);
+  background: var(--dn-chip-blue-bg);
+  color: var(--dn-secondary);
+  font-weight: 700;
+}
+
+.landingEyebrowRadius {
+  border-radius: 999px;
+}
+
+.landingHeading2 {
+  color: var(--dn-primary);
+  margin-bottom: 16px;
+}
+
+.landingHeading2Tight {
+  color: var(--dn-primary);
+  margin-bottom: 20px;
+}
+
+.landingParagraph {
+  color: var(--dn-muted);
+  margin-bottom: 18px;
+}
+
+.landingParagraphLoose {
+  color: var(--dn-muted);
+  margin-bottom: 28px;
+}
+
+.landingParagraphCenter {
+  color: var(--dn-muted);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.landingParagraphNoMargin {
+  margin: 0;
+  color: var(--dn-muted);
+}
+
+.landingMiniHeading {
+  font-size: 20px;
+  color: var(--dn-primary);
+  margin-bottom: 10px;
+}
+
+.landingMiniHeadingSm {
+  font-size: 20px;
+  color: var(--dn-primary);
+  margin-bottom: 6px;
+}
+
+.landingCardWhite {
+  background: var(--dn-service-card-bg);
+  border: 1px solid var(--dn-border);
+  border-radius: var(--dn-radius-lg);
+  padding: 22px;
+  height: 100%;
+}
+
+.landingSectionWhite {
+  padding: var(--dn-section-y) 0;
+  background: var(--dn-body-bg);
+}
+
+.landingSectionPadBottom {
+  padding: 0 0 var(--dn-section-y);
+  background: var(--dn-body-bg);
+}
+
+.landingServiceCard {
+  background: var(--dn-service-card-bg);
+  border: 1px solid var(--dn-border);
+  border-radius: var(--dn-radius-xl);
+  padding: 28px;
+  height: 100%;
+  box-shadow: var(--dn-shadow-card);
+}
+
+.landingServiceIcon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: var(--dn-icon-blue-tint);
+  color: var(--dn-secondary);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.landingServiceTitle {
+  color: var(--dn-primary);
+  margin-bottom: 14px;
+}
+
+.landingRibbon {
+  background: var(--dn-gradient-cta);
+  border-radius: 30px;
+  padding: 42px 36px;
+  color: var(--dn-nav-icon);
+  box-shadow: var(--dn-shadow-cta-ribbon);
+}
+
+.landingRibbonTitle {
+  color: var(--dn-nav-icon);
+  margin-bottom: 12px;
+}
+
+.landingRibbonText {
+  color: var(--dn-cta-muted);
+  margin: 0;
+}
+
+.landingRibbonBtn {
+  background: var(--dn-nav-icon);
+  color: var(--dn-on-light-surface);
+  border-radius: var(--dn-radius-sm);
+  padding: 14px 22px;
+  font-weight: 800;
+}
+
+.landingContactInfo {
+  background: var(--dn-service-card-bg);
+  border-radius: var(--dn-radius-xl);
+  padding: 28px;
+  border: 1px solid var(--dn-border);
+  height: 100%;
+  box-shadow: var(--dn-shadow-card);
+}
+
+.landingContactIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--dn-icon-blue-tint);
+  display: grid;
+  place-items: center;
+  color: var(--dn-secondary);
+  font-size: 22px;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.landingFormShell {
+  background: var(--dn-service-card-bg);
+  border-radius: var(--dn-radius-xl);
+  padding: 28px;
+  border: 1px solid var(--dn-border);
+  box-shadow: var(--dn-shadow-card);
+}
+
+.landingFooter {
+  background: var(--dn-primary-dark);
+  color: var(--dn-footer-muted);
+  padding: 28px 0;
+  border-top: 1px solid var(--dn-footer-divider);
+}
+
+.landingFooterText {
+  margin: 0;
+}
+
+.landingFooterStrong {
+  color: var(--dn-nav-icon);
+}
+
+/* --- Formulário de contato (Bootstrap + tokens) --- */
+.formControlLanding {
+  min-height: 54px;
+  border-radius: var(--dn-radius-sm);
+  background-color: var(--dn-body-bg);
+  border: 1px solid var(--dn-border);
+  color: var(--dn-primary);
+}
+
+.formControlLanding::placeholder,
+.textareaLanding::placeholder {
+  color: var(--dn-muted);
+}
+
+.formControlLanding:focus,
+.textareaLanding:focus {
+  border-color: var(--dn-secondary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--dn-secondary), transparent 80%);
+}
+
+.textareaLanding {
+  border-radius: var(--dn-radius-sm);
+  background-color: var(--dn-body-bg);
+  border: 1px solid var(--dn-border);
+  color: var(--dn-primary);
+}
+
+.formSubmitLanding {
+  background: var(--dn-secondary);
+  color: var(--dn-nav-icon);
+  border-radius: var(--dn-radius-sm);
+  padding: 14px 22px;
+  font-weight: 800;
+}
+
+.formSubmitLanding[disabled] {
+  opacity: 0.85;
+}
+
+.landingPlainLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.landingMuiNavLink {
+  color: var(--dn-header-nav);
+  text-decoration: none;
+}
+
+.formStatusOk {
+  margin: 0;
+  color: var(--dn-success);
+  font-weight: 600;
+}
+
+.formStatusErr {
+  margin: 0;
+  color: var(--dn-error);
+  font-weight: 600;
+}
+
+/* Carousel: imagens fluídas */
+.carouselImgFluid {
+  width: 100%;
+  display: block;
+}
