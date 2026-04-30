@@ -44,8 +44,7 @@ export default function ContactForm() {
 
       setStatus({
         type: 'success',
-        message:
-          'Recebemos sua solicitação. Em breve um especialista ANTERO entra em contato com próximos passos.',
+        message: 'Recebido. Respondemos em até um dia útil com próximos passos.',
       })
       setFormData(initialFormData)
     } catch (error) {
@@ -85,7 +84,7 @@ export default function ContactForm() {
         <input
           type="text"
           className={`form-control ${lc.formControlLanding}`}
-          placeholder="Ex.: sistema interno / site institucional / app operacional"
+          placeholder="Ex.: plataforma interna, site institucional, integração"
           value={formData.subject}
           onChange={(event) => setFormData((prev) => ({ ...prev, subject: event.target.value }))}
           required
@@ -96,7 +95,7 @@ export default function ContactForm() {
         <textarea
           className={`form-control ${lc.textareaLanding}`}
           rows={6}
-          placeholder="Objetivos de negócio, público-alvo interno/externo, prazos e integrações relevantes."
+          placeholder="O que precisa mudar, para quem impacta, prazo alvo, sistemas que integram."
           value={formData.message}
           onChange={(event) => setFormData((prev) => ({ ...prev, message: event.target.value }))}
           required

@@ -1,4 +1,4 @@
-/* Estilos da home — valores via :root definidos em ThemeRegistry (getLandingCssVariables). */
+/* Landing premium dark — profundidade sutil, estrutura limpa. */
 
 .landingHeader {
   background: var(--dn-header-bg);
@@ -7,9 +7,9 @@
 }
 
 .landingLogoImg {
-  height: 64px;
+  height: 56px;
   width: auto;
-  max-width: min(55vw, 300px);
+  max-width: min(50vw, 260px);
   object-fit: contain;
 }
 
@@ -18,12 +18,24 @@
 }
 
 .landingHeaderCta {
-  background: var(--dn-secondary);
+  background: linear-gradient(135deg, #2563eb, #1e40af);
   color: var(--dn-nav-icon);
-  border-radius: var(--dn-radius-sm);
-  padding: 12px 18px;
-  font-weight: 700;
+  border-radius: var(--dn-radius-pill);
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 0.875rem;
   box-shadow: var(--dn-shadow-header-cta);
+  letter-spacing: -0.01em;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+:global(.header) :global(.btn-getstarted).landingHeaderCta,
+:global(.header) :global(.btn-getstarted).landingHeaderCta:focus {
+  border-radius: var(--dn-radius-pill);
+  padding: 10px 18px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 0 20px;
 }
 
 .landingHero {
@@ -34,99 +46,114 @@
   overflow: hidden;
 }
 
+/* Realce opcional discreto atrás do conteúdo */
 .landingHeroGlow {
   position: absolute;
   inset: 0;
   background: var(--dn-gradient-glow);
   pointer-events: none;
+  opacity: 0.85;
 }
 
-.landingBadge {
+.landingEyebrow {
   display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  border-radius: var(--dn-radius-pill);
-  background: var(--dn-glass-bg);
+  margin-bottom: 14px;
+  padding: 8px 14px;
   border: 1px solid var(--dn-glass-border);
-  color: var(--dn-overlay-strong);
+  background: var(--dn-chip-blue-bg);
+  border-radius: var(--dn-radius-pill);
+  font-size: 0.75rem;
   font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dn-overlay-strong);
 }
 
-.landingBadgeRadius {
-  border-radius: 999px;
+.landingEyebrowRadius {
+  border-radius: var(--dn-radius-pill);
 }
 
 .landingHeroTitle {
   color: var(--dn-nav-icon);
-  max-width: 720px;
-  margin-bottom: 28px;
-  letter-spacing: -0.02em;
-  line-height: 1.12;
+  max-width: 34rem;
+  margin-bottom: 22px;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  font-weight: 600;
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
 }
 
 .landingSectionIntro {
-  margin-bottom: 4rem;
+  margin-bottom: 4.5rem;
 }
 
 .landingSectionIntroWide {
-  max-width: min(42rem, 92vw);
+  max-width: min(36rem, 92vw);
   margin-left: auto;
   margin-right: auto;
 }
 
 .landingHeroLead {
-  color: var(--dn-overlay-muted);
-  font-size: clamp(1.05rem, 1.05rem + 0.2vw, 1.2rem);
-  line-height: 1.65;
-  max-width: 560px;
-  margin-bottom: 40px;
+  color: var(--dn-muted);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  max-width: 30rem;
+  margin-bottom: 32px;
 }
 
 .landingBtnPrimary {
-  background: var(--dn-secondary);
+  background: linear-gradient(135deg, #2563eb, #1e40af);
   color: var(--dn-nav-icon);
-  border-radius: var(--dn-radius-sm);
-  padding: 14px 22px;
-  font-weight: 800;
+  border-radius: var(--dn-radius-pill);
+  padding: 12px 22px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: -0.015em;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 34px rgba(30, 64, 175, 0.36);
 }
 
 .landingBtnGhost {
-  background: transparent;
-  color: var(--dn-nav-icon);
-  border: 1px solid var(--dn-glass-border-ghost);
-  border-radius: var(--dn-radius-sm);
-  padding: 14px 22px;
-  font-weight: 700;
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--dn-primary);
+  border: 1px solid var(--dn-border);
+  border-radius: var(--dn-radius-pill);
+  padding: 12px 22px;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  letter-spacing: -0.015em;
 }
 
-.landingStatCard {
-  padding: 20px 22px;
+.landingHeroMeta {
+  margin-top: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 1px solid var(--dn-glass-border);
   border-radius: var(--dn-radius-md);
   background: var(--dn-glass-bg);
-  border: 1px solid var(--dn-glass-border-weak);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--dn-muted);
+  letter-spacing: -0.01em;
 }
 
-.landingStatTitle {
-  color: var(--dn-nav-icon);
-  display: block;
-  font-size: 22px;
-}
-
-.landingStatDesc {
-  color: var(--dn-overlay-medium);
+.landingHeroMeta strong {
+  color: var(--dn-primary);
+  font-weight: 500;
 }
 
 .landingHeroVisual {
-  background: var(--dn-glass-bg-stat);
-  border: 1px solid var(--dn-glass-border);
-  border-radius: var(--dn-radius-xxl);
-  padding: 22px;
+  background: var(--dn-service-card-bg);
+  border: 1px solid var(--dn-border);
+  border-radius: var(--dn-radius-lg);
+  padding: 18px;
   box-shadow: var(--dn-shadow-hero-aside);
 }
 
 .landingHeroVisualImg {
-  border-radius: var(--dn-radius-lg);
+  border-radius: var(--dn-radius-md);
 }
 
 .landingSection {
@@ -136,6 +163,8 @@
 .landingSectionSoft {
   padding: var(--dn-section-y) 0;
   background: var(--dn-gradient-soft);
+  border-top: 1px solid var(--dn-border);
+  border-bottom: 1px solid var(--dn-border);
 }
 
 .landingAboutFigure {
@@ -143,178 +172,198 @@
 }
 
 .landingAboutImg {
-  border-radius: var(--dn-radius-hero);
+  border-radius: var(--dn-radius-lg);
   box-shadow: var(--dn-shadow-about-img);
+  border: 1px solid var(--dn-border);
 }
 
 .landingAboutContent {
-  max-width: 620px;
-}
-
-.landingEyebrow {
-  display: inline-block;
-  margin-bottom: 20px;
-  padding: 8px 16px;
-  border-radius: var(--dn-radius-pill);
-  background: var(--dn-chip-blue-bg);
-  color: var(--dn-secondary);
-  font-weight: 700;
-}
-
-.landingEyebrowRadius {
-  border-radius: 999px;
+  max-width: 34rem;
 }
 
 .landingHeading2 {
   color: var(--dn-primary);
-  margin-bottom: 20px;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
+  margin-bottom: 18px;
+  letter-spacing: -0.03em;
+  line-height: 1.14;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 2.2vw, 2.15rem);
 }
 
 .landingHeading2Tight {
   color: var(--dn-primary);
-  margin-bottom: 24px;
-  letter-spacing: -0.025em;
-  line-height: 1.18;
+  margin-bottom: 20px;
+  letter-spacing: -0.03em;
+  line-height: 1.14;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 2.2vw, 2.15rem);
 }
 
 .landingParagraph {
   color: var(--dn-muted);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .landingParagraphLoose {
   color: var(--dn-muted);
   margin-bottom: 28px;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .landingParagraphCenter {
   color: var(--dn-muted);
-  max-width: 42rem;
+  max-width: 34rem;
   margin: 0 auto;
-  line-height: 1.75;
-  font-size: 1.05rem;
+  line-height: 1.62;
+  font-size: 1rem;
 }
 
 .landingParagraphNoMargin {
   margin: 0;
   color: var(--dn-muted);
+  font-size: 0.9625rem;
+  line-height: 1.6;
 }
 
 .landingMiniHeading {
-  font-size: 20px;
+  font-size: 0.9375rem;
+  font-weight: 600;
   color: var(--dn-primary);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
 }
 
 .landingMiniHeadingSm {
-  font-size: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
   color: var(--dn-primary);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
 }
 
 .landingCardWhite {
   background: var(--dn-service-card-bg);
   border: 1px solid var(--dn-border);
-  border-radius: var(--dn-radius-lg);
-  padding: 28px 26px;
+  border-radius: var(--dn-radius-md);
+  padding: 18px 18px 16px;
   height: 100%;
+  box-shadow: var(--dn-shadow-card);
 }
 
 .landingSectionWhite {
   padding: var(--dn-section-y) 0;
-  background: var(--dn-body-bg);
+  background: linear-gradient(180deg, #0a0a0a 0%, #0b0f14 100%);
 }
 
 .landingSectionPadBottom {
   padding: 0 0 var(--dn-section-y);
-  background: var(--dn-body-bg);
+  background: #0a0a0a;
 }
 
 .landingServiceCard {
   background: var(--dn-service-card-bg);
   border: 1px solid var(--dn-border);
-  border-radius: var(--dn-radius-xl);
-  padding: 36px 32px;
+  border-radius: var(--dn-radius-lg);
+  padding: 28px;
   height: 100%;
   box-shadow: var(--dn-shadow-card);
 }
 
 .landingServiceIcon {
-  width: 58px;
-  height: 58px;
-  border-radius: 16px;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  margin-bottom: 16px;
   display: grid;
   place-items: center;
-  background: var(--dn-icon-blue-tint);
+  font-size: 22px;
   color: var(--dn-secondary);
-  font-size: 24px;
-  margin-bottom: 20px;
+  background: var(--dn-icon-blue-tint);
+  border: 1px solid var(--dn-glass-border);
 }
 
 .landingServiceTitle {
   color: var(--dn-primary);
-  margin-bottom: 14px;
-  font-size: 1.35rem;
-  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .landingRibbon {
-  background: var(--dn-gradient-cta);
-  border-radius: 30px;
-  padding: clamp(44px, 5vw, 56px) clamp(36px, 4vw, 52px);
+  background: var(--dn-service-card-bg);
+  border: 1px solid var(--dn-border);
+  border-radius: var(--dn-radius-lg);
+  padding: 28px 32px;
   color: var(--dn-nav-icon);
   box-shadow: var(--dn-shadow-cta-ribbon);
 }
 
 .landingRibbonTitle {
   color: var(--dn-nav-icon);
-  margin-bottom: 14px;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.025em;
+  line-height: 1.18;
+  font-weight: 600;
+  font-size: clamp(1.25rem, 1.5vw, 1.45rem);
 }
 
 .landingRibbonText {
-  color: var(--dn-cta-muted);
+  color: var(--dn-muted);
   margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.55;
 }
 
 .landingRibbonBtn {
-  background: var(--dn-nav-icon);
-  color: var(--dn-on-light-surface);
-  border-radius: var(--dn-radius-sm);
-  padding: 14px 22px;
-  font-weight: 800;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: var(--dn-nav-icon);
+  border-radius: var(--dn-radius-pill);
+  padding: 12px 22px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  letter-spacing: -0.015em;
+  box-shadow: 0 16px 34px rgba(30, 64, 175, 0.34);
 }
 
 .landingContactInfo {
   background: var(--dn-service-card-bg);
-  border-radius: var(--dn-radius-xl);
-  padding: 28px;
+  border-radius: var(--dn-radius-lg);
+  padding: 24px;
   border: 1px solid var(--dn-border);
   height: 100%;
   box-shadow: var(--dn-shadow-card);
 }
 
-.landingContactIcon {
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
-  background: var(--dn-icon-blue-tint);
-  display: grid;
-  place-items: center;
+.landingContactBlock {
+  margin-bottom: 1.75rem;
+}
+
+.landingContactBlock:last-child {
+  margin-bottom: 0;
+}
+
+.landingContactLink {
+  color: var(--dn-primary);
+  text-decoration: none;
+}
+
+.landingContactLink:hover {
   color: var(--dn-secondary);
-  font-size: 22px;
-  margin-right: 16px;
-  flex-shrink: 0;
+}
+
+.landingFooterSep {
+  color: var(--dn-footer-muted);
 }
 
 .landingFormShell {
   background: var(--dn-service-card-bg);
-  border-radius: var(--dn-radius-xl);
-  padding: 28px;
+  border-radius: var(--dn-radius-lg);
+  padding: 30px;
   border: 1px solid var(--dn-border);
   box-shadow: var(--dn-shadow-card);
 }
@@ -322,36 +371,40 @@
 .landingFooter {
   background: var(--dn-primary-dark);
   color: var(--dn-footer-muted);
-  padding: 28px 0;
+  padding: 20px 0;
   border-top: 1px solid var(--dn-footer-divider);
 }
 
 .landingFooterText {
   margin: 0;
+  font-size: 0.8125rem;
 }
 
 .landingFooterStrong {
-  color: var(--dn-nav-icon);
+  color: var(--dn-muted);
+  font-weight: 500;
 }
 
-/* --- Formulário de contato (Bootstrap + tokens) --- */
 .formControlLanding {
-  min-height: 54px;
+  min-height: 48px;
   border-radius: var(--dn-radius-sm);
   background-color: var(--dn-body-bg);
   border: 1px solid var(--dn-border);
   color: var(--dn-primary);
+  font-size: 0.9375rem;
 }
 
 .formControlLanding::placeholder,
 .textareaLanding::placeholder {
   color: var(--dn-muted);
+  opacity: 0.85;
 }
 
 .formControlLanding:focus,
 .textareaLanding:focus {
-  border-color: var(--dn-secondary);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--dn-secondary), transparent 80%);
+  border-color: color-mix(in srgb, var(--dn-secondary), var(--dn-border) 40%);
+  box-shadow: 0 0 0 1px var(--dn-secondary);
+  outline: none;
 }
 
 .textareaLanding {
@@ -359,18 +412,23 @@
   background-color: var(--dn-body-bg);
   border: 1px solid var(--dn-border);
   color: var(--dn-primary);
+  font-size: 0.9375rem;
 }
 
 .formSubmitLanding {
-  background: var(--dn-secondary);
+  background: linear-gradient(135deg, #2563eb, #1e40af);
   color: var(--dn-nav-icon);
-  border-radius: var(--dn-radius-sm);
-  padding: 14px 22px;
-  font-weight: 800;
+  border-radius: var(--dn-radius-pill);
+  padding: 12px 22px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: -0.015em;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 16px 34px rgba(30, 64, 175, 0.3);
 }
 
 .formSubmitLanding[disabled] {
-  opacity: 0.85;
+  opacity: 0.65;
 }
 
 .landingPlainLink {
@@ -387,16 +445,17 @@
 .formStatusOk {
   margin: 0;
   color: var(--dn-success);
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.875rem;
 }
 
 .formStatusErr {
   margin: 0;
   color: var(--dn-error);
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.875rem;
 }
 
-/* Carousel: imagens fluídas */
 .carouselImgFluid {
   width: 100%;
   display: block;

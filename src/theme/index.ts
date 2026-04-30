@@ -51,26 +51,27 @@ export const theme = createTheme({
     ].join(','),
 
     h1: {
-      fontWeight: 800,
-      fontSize: 'clamp(2.6rem, 5vw, 4.6rem)',
-      lineHeight: 1.05,
-      letterSpacing: '-0.03em',
+      fontWeight: 600,
+      fontSize: 'clamp(2.25rem, 4.2vw, 3.35rem)',
+      lineHeight: 1.08,
+      letterSpacing: '-0.035em',
     },
 
     h2: {
-      fontWeight: 700,
-      fontSize: 'clamp(2rem, 3vw, 3.2rem)',
-      lineHeight: 1.1,
+      fontWeight: 600,
+      fontSize: 'clamp(1.625rem, 2.25vw, 2.375rem)',
+      lineHeight: 1.14,
+      letterSpacing: '-0.03em',
     },
 
     body1: {
       fontSize: '1rem',
-      lineHeight: 1.8,
+      lineHeight: 1.65,
     },
 
     button: {
       textTransform: 'none',
-      fontWeight: 700,
+      fontWeight: 600,
     },
   },
 

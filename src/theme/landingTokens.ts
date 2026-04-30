@@ -9,11 +9,11 @@ export const landingTokens = {
     muted: '#A1A1AA',
     bodyBg: '#0A0A0A',
     onLightSurface: '#0A0A0A',
-    border: 'rgba(255,255,255,0.08)',
+    border: 'rgba(255,255,255,0.06)',
     footerBg: '#050505',
     navIcon: '#FFFFFF',
   
-    headerBackdrop: 'rgba(10,10,10,0.75)',
+    headerBackdrop: 'rgba(10,10,10,0.88)',
   
     success: '#22C55E',
     error: '#EF4444',
@@ -28,8 +28,8 @@ export const landingTokens = {
     glassBgStat: 'rgba(255,255,255,0.02)',
     glassBorderWeak: 'rgba(255,255,255,0.04)',
   
-    chipBlueBg: 'rgba(37,99,235,0.12)',
-    iconBlueTint: 'rgba(37,99,235,0.18)',
+    chipBlueBg: 'transparent',
+    iconBlueTint: 'rgba(255,255,255,0.04)',
   
     serviceCardBg: '#0B0F14',
   
@@ -45,10 +45,10 @@ export const landingTokens = {
 
   gradients: {
     hero: gradientHero,
-    ctaBanner: gradientHero,
+    ctaBanner: 'linear-gradient(135deg, #0B0F14 0%, #0A0A0A 55%, #050505 100%)',
     soft: 'linear-gradient(180deg, #0A0A0A 0%, #0B0F14 100%)',
     heroGlow:
-  'radial-gradient(circle at 20% 20%, rgba(37,99,235,0.15), transparent 25%), radial-gradient(circle at 80% 30%, rgba(37,99,235,0.12), transparent 22%)',
+      'radial-gradient(circle at 20% 20%, rgba(37,99,235,0.14), transparent 28%), radial-gradient(circle at 82% 30%, rgba(30,64,175,0.12), transparent 24%)',
   },
 
   header: {
@@ -56,32 +56,32 @@ export const landingTokens = {
   },
 
   shadow: {
-    headerCta: '0 14px 30px rgba(29, 78, 216, 0.24)',
-    heroAside: '0 30px 80px rgba(2, 8, 23, 0.34)',
-    aboutImg: '0 24px 70px rgba(15, 23, 42, 0.14)',
-    card: '0 20px 60px rgba(0,0,0,0.6)',
-    ctaRibbon: '0 30px 80px rgba(7, 24, 47, 0.18)',
-    carouselPanel: '0 20px 40px rgba(0,0,0,0.4)',
-    carouselHeavy: '0 30px 60px rgba(0,0,0,0.5)',
-    carouselHeavySm: '0 20px 40px rgba(0,0,0,0.5)',
-    carouselSoft: '0 15px 35px rgba(0,0,0,0.4)',
-    carouselBottom: '0 10px 25px rgba(0,0,0,0.35)',
+    headerCta: '0 14px 34px rgba(30, 64, 175, 0.28)',
+    heroAside: '0 20px 50px rgba(0,0,0,0.5)',
+    aboutImg: '0 20px 50px rgba(0,0,0,0.45)',
+    card: '0 20px 50px rgba(0,0,0,0.5)',
+    ctaRibbon: '0 20px 50px rgba(0,0,0,0.45)',
+    carouselPanel: '0 20px 50px rgba(0,0,0,0.5)',
+    carouselHeavy: '0 20px 50px rgba(0,0,0,0.55)',
+    carouselHeavySm: '0 16px 38px rgba(0,0,0,0.5)',
+    carouselSoft: '0 16px 36px rgba(0,0,0,0.4)',
+    carouselBottom: '0 12px 30px rgba(0,0,0,0.35)',
   },
 
   radius: {
-    sm: 14,
-    md: 18,
-    lg: 20,
-    xl: 24,
-    hero: 26,
-    xxl: 28,
+    sm: 12,
+    md: 14,
+    lg: 18,
+    xl: 20,
+    hero: 22,
+    xxl: 24,
     pill: 999,
   },
 
   spacing: {
-    sectionY: 120,
-    heroTopPad: 190,
-    heroBottomPad: 132,
+    sectionY: 124,
+    heroTopPad: 186,
+    heroBottomPad: 116,
   },
 
   carousel: {

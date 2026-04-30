@@ -23,26 +23,27 @@ export function HeroCarousel() {
             <Container maxWidth="lg">
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                 <Box sx={{ flex: 1, color: 'text.primary' }}>
-                  <Typography variant="overline" sx={{ color: 'secondary.main', letterSpacing: 2 }}>
-                    Plataforma &amp; dados
+                  <Typography variant="overline" sx={{ color: 'secondary.main', letterSpacing: '0.06em' }}>
+                    Plataforma
                   </Typography>
 
-                  <Typography variant="h2" sx={{ fontWeight: 700, mb: 3 }}>
-                    Sistemas internos sob medida com traçabilidade e performance
+                  <Typography variant="h2" sx={{ fontWeight: 600, mb: 2, letterSpacing: '-0.03em' }}>
+                    Sistemas internos com traço de auditoria real
                   </Typography>
 
                   <Typography
                     variant="h6"
                     sx={(t) => ({
-                      mb: 4,
+                      mb: 3,
                       color: t.landing.carousel.textMuted,
+                      fontWeight: 400,
+                      lineHeight: 1.55,
                     })}
                   >
-                    Desenvolvimento orientado à redução de custo oculto, automação inteligente e escalabilidade real —
-                    infraestrutura pronta para exigências enterprise.
+                    Menos custo oculto em processo manual. Arquitetura pronta para carga e conformidade.
                   </Typography>
 
-                  <Button variant="contained" color="secondary" size="large">
+                  <Button variant="contained" color="primary" size="large" sx={{ fontWeight: 600 }}>
                     Solicitar proposta
                   </Button>
                 </Box>
@@ -105,26 +106,27 @@ export function HeroCarousel() {
             <Container maxWidth="lg">
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                 <Box sx={{ flex: 1, color: 'text.primary' }}>
-                  <Typography variant="overline" sx={{ color: 'secondary.main', letterSpacing: 2 }}>
-                    Marca institucional
+                  <Typography variant="overline" sx={{ color: 'secondary.main', letterSpacing: '0.06em' }}>
+                    Institucional
                   </Typography>
 
-                  <Typography variant="h2" sx={{ fontWeight: 700, mb: 3 }}>
-                    Narrativa digital séria para fechar ciclo com clientes exigentes
+                  <Typography variant="h2" sx={{ fontWeight: 600, mb: 2, letterSpacing: '-0.03em' }}>
+                    Autoridade que suporta ciclo de venda B2B longo
                   </Typography>
 
                   <Typography
                     variant="h6"
                     sx={(t) => ({
-                      mb: 4,
+                      mb: 3,
                       color: t.landing.carousel.textMuted,
+                      fontWeight: 400,
+                      lineHeight: 1.55,
                     })}
                   >
-                    Arquitetura de conteúdo, velocidade técnica e posicionamento alinhados à conversão e à credibilidade
-                    em cenários high-ticket e B2B.
+                    Conteúdo e performance para quem decide devagar e exige credibilidade antes do contrato.
                   </Typography>
 
-                  <Button variant="contained" color="secondary" size="large">
+                  <Button variant="contained" color="primary" size="large" sx={{ fontWeight: 600 }}>
                     Agendar análise
                   </Button>
                 </Box>
@@ -187,26 +189,27 @@ export function HeroCarousel() {
             <Container maxWidth="lg">
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                 <Box sx={{ flex: 1, color: 'text.primary' }}>
-                  <Typography variant="overline" sx={{ color: 'secondary.main', letterSpacing: 2 }}>
-                    Mobile &amp; operações
+                  <Typography variant="overline" sx={{ color: 'secondary.main', letterSpacing: '0.06em' }}>
+                    Mobile
                   </Typography>
 
-                  <Typography variant="h2" sx={{ fontWeight: 700, mb: 3 }}>
-                    Apps conectados ao core do negócio — rapidez com governança
+                  <Typography variant="h2" sx={{ fontWeight: 600, mb: 2, letterSpacing: '-0.03em' }}>
+                    Apps alinhados ao core e às políticas da empresa
                   </Typography>
 
                   <Typography
                     variant="h6"
                     sx={(t) => ({
-                      mb: 4,
+                      mb: 3,
                       color: t.landing.carousel.textMuted,
+                      fontWeight: 400,
+                      lineHeight: 1.55,
                     })}
                   >
-                    Interfaces móveis em continuidade com seu backend corporativo; foco em experiência sob pressão real,
-                    sync seguro e manutenibilidade ao longo do tempo.
+                    Offline-first quando precisa; sync seguro quando reconecta. Menos gambiarra na operação real.
                   </Typography>
 
-                  <Button variant="contained" color="secondary" size="large">
+                  <Button variant="contained" color="primary" size="large" sx={{ fontWeight: 600 }}>
                     Falar com especialista
                   </Button>
                 </Box>

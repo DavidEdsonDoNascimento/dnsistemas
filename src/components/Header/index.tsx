@@ -46,8 +46,8 @@ export function Header() {
           </Link>
         </Box>
 
-        <Button variant="contained" color="primary">
-          Agendar análise
+        <Button variant="contained" color="primary" sx={{ fontWeight: 600 }}>
+          Solicitar proposta
         </Button>
       </Toolbar>
     </AppBar>

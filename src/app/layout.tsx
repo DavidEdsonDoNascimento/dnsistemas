@@ -12,9 +12,9 @@ import '@/assets/vendor/bootstrap-icons/bootstrap-icons.css'
 import ThemeRegistry from '@/theme/ThemeRegistry'
 
 export const metadata: Metadata = {
-  title: 'ANTERO — Software sob medida para empresas',
+  title: 'ANTERO — Software sob medida',
   description:
-    'Soluções de software sob medida que reduzem custo operacional, aceleram processos e escalam com o seu negócio.',
+    'Engenharia de produto para operações que precisam ganhar eficiência e escala. Proposta clara, execução séria.',
   icons: {
     icon: '/favicon_v1.ico',
   },
