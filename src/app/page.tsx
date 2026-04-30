@@ -51,24 +51,24 @@ export default function Home() {
           <div className={lc.landingHeroGlow} aria-hidden />
 
           <div className="container position-relative">
-            <div className="row align-items-start gy-5 gx-lg-5">
+            <div className={`row align-items-center ${lc.landingHeroLayout}`}>
               <div className="col-lg-6">
-                <div className="hero-content">
+                <div className={`hero-content ${lc.landingHeroContent}`}>
                   <span className={lc.landingEyebrow}>Software sob medida</span>
 
-                  <h1 className={lc.landingHeroTitle}>Menos atrito na operação. Mais escala com clareza.</h1>
+                  <h1 className={lc.landingHeroTitle}>Reduza custo operacional e escale com software sob medida.</h1>
 
                   <p className={lc.landingHeroLead}>
-                    A ANTERO desenha e constrói produtos sob medida — da descoberta à produção — com foco em custo,
-                    performance e roadmap que aguenta crescimento.
+                    Da descoberta à produção, entregamos plataformas robustas para aumentar eficiência, desempenho e
+                    previsibilidade do negócio.
                   </p>
 
-                  <div className="d-flex flex-wrap gap-2">
+                  <div className={`d-flex flex-wrap gap-2 ${lc.landingHeroActions}`}>
                     <a href="#contact" className={`btn ${lc.landingBtnPrimary}`}>
                       Solicitar proposta
                     </a>
                     <a href="#services" className={`btn ${lc.landingBtnGhost}`}>
-                      Ver linha de soluções
+                      Ver soluções
                     </a>
                   </div>
 
@@ -99,13 +99,20 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="col-lg-6 mt-2 mt-lg-0">
-                <div className={lc.landingHeroVisual}>
-                  <img
-                    src="/assets/img/illustration/illustration-14.webp"
-                    alt=""
-                    className={`img-fluid ${lc.landingHeroVisualImg}`}
-                  />
+              <div className="col-lg-6 mt-4 mt-lg-0">
+                <div className={lc.landingHeroVisualWrap}>
+                  <div className={lc.landingHeroPanel}>
+                    <span className={lc.landingHeroPanelLabel}>Visão do produto</span>
+                    <strong className={lc.landingHeroPanelTitle}>Dashboard operacional em tempo real</strong>
+                    <p className={lc.landingHeroPanelText}>KPIs críticos, alertas e fluxo de trabalho em um só lugar.</p>
+                  </div>
+                  <div className={lc.landingHeroVisual}>
+                    <img
+                      src="/assets/img/illustration/illustration-14.webp"
+                      alt=""
+                      className={`img-fluid ${lc.landingHeroVisualImg}`}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
