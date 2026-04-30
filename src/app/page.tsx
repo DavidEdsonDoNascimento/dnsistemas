@@ -12,7 +12,7 @@ export default function Home() {
           <Link href="/" className="logo d-flex align-items-center text-decoration-none">
             <Image
               src="/antero_logo_header_cropped.png"
-              alt="Antero software sob medida"
+              alt="ANTERO — software sob medida"
               width={280}
               height={64}
               priority
@@ -41,7 +41,7 @@ export default function Home() {
           </nav>
 
           <a className={`btn-getstarted ${lc.landingHeaderCta}`} href="#contact">
-            Solicitar contato
+            Falar com especialista
           </a>
         </div>
       </header>
@@ -51,65 +51,64 @@ export default function Home() {
           <div className={lc.landingHeroGlow} />
 
           <div className="container position-relative">
-            <div className="row align-items-center gy-5">
+            <div className="row align-items-center gy-5 gx-lg-5">
               <div className="col-lg-6">
                 <div className="hero-content">
                   <div className={`mb-4 ${lc.landingBadge}`}>
                     <i className="bi bi-shield-check"></i>
-                    Soluções empresariais com foco em operação real
+                    Engenharia de produto orientada a resultado
                   </div>
 
                   <h1 className={lc.landingHeroTitle}>
-                    Tecnologia corporativa para empresas que precisam de mais controle, eficiência e presença
-                    digital.
+                    Software sob medida que corta custo, acelera a operação e escala com o seu negócio.
                   </h1>
 
                   <p className={lc.landingHeroLead}>
-                    A DN Sistemas Corporativos desenvolve sistemas sob medida, sites institucionais e aplicações
-                    empresariais para negócios que querem profissionalizar processos, integrar operações e crescer com
-                    uma base digital sólida.
+                    A ANTERO projeta soluções tecnológicas alinhadas às necessidades reais do seu negócio —
+                    menos retrabalho, mais previsibilidade e performance para líderes que precisam de governança
+                    digital sólida.
                   </p>
 
                   <div className="d-flex flex-wrap gap-3">
-                    <a href="#services" className={`btn ${lc.landingBtnPrimary}`}>
-                      Conhecer serviços
+                    <a href="#contact" className={`btn ${lc.landingBtnPrimary}`}>
+                      Solicitar proposta
                     </a>
 
-                    <a href="#contact" className={`btn ${lc.landingBtnGhost}`}>
-                      Falar com a DN
+                    <a href="#services" className={`btn ${lc.landingBtnGhost}`}>
+                      Ver como entregamos
                     </a>
                   </div>
 
-                  <div className="row mt-5 gy-3">
+                  <div className="row mt-5 gx-3 gy-3">
                     <div className="col-sm-4">
                       <div className={lc.landingStatCard}>
-                        <strong className={lc.landingStatTitle}>Sob medida</strong>
-                        <span className={lc.landingStatDesc}>Projetos adaptados ao negócio</span>
+                        <strong className={lc.landingStatTitle}>Eficiência</strong>
+                        <span className={lc.landingStatDesc}>Processos automatizados, menos erro manual</span>
                       </div>
                     </div>
 
                     <div className="col-sm-4">
                       <div className={lc.landingStatCard}>
-                        <strong className={lc.landingStatTitle}>Corporativo</strong>
-                        <span className={lc.landingStatDesc}>Visual sério e profissional</span>
+                        <strong className={lc.landingStatTitle}>Escalável</strong>
+                        <span className={lc.landingStatDesc}>Arquitetura preparada para crescer</span>
                       </div>
                     </div>
 
                     <div className="col-sm-4">
                       <div className={lc.landingStatCard}>
-                        <strong className={lc.landingStatTitle}>Tecnologia</strong>
-                        <span className={lc.landingStatDesc}>Soluções modernas e escaláveis</span>
+                        <strong className={lc.landingStatTitle}>Impacto</strong>
+                        <span className={lc.landingStatDesc}>Métricas e ROI no centro do projeto</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="col-lg-6">
+              <div className="col-lg-6 mt-4 mt-lg-0">
                 <div className={lc.landingHeroVisual}>
                   <img
                     src="/assets/img/illustration/illustration-14.webp"
-                    alt="DN Sistemas Corporativos"
+                    alt="Soluções de software ANTERO"
                     className={`img-fluid ${lc.landingHeroVisualImg}`}
                   />
                 </div>
@@ -120,50 +119,52 @@ export default function Home() {
 
         <section id="about" className={`section ${lc.landingSectionSoft}`}>
           <div className="container">
-            <div className="row align-items-center gy-5">
+            <div className="row align-items-center gy-5 gx-lg-5">
               <div className="col-lg-6">
                 <div className={lc.landingAboutFigure}>
                   <img
                     src="/assets/img/about/about-square-8.webp"
                     className={`img-fluid ${lc.landingAboutImg}`}
-                    alt="Sobre a DN Sistemas"
+                    alt="Sobre a ANTERO"
                   />
                 </div>
               </div>
 
               <div className="col-lg-6">
                 <div className={lc.landingAboutContent}>
-                  <span className={`d-inline-block ${lc.landingEyebrow}`}>Sobre a DN</span>
+                  <span className={`d-inline-block ${lc.landingEyebrow}`}>Por que ANTERO</span>
 
-                  <h2 className={lc.landingHeading2Tight}>Tecnologia aplicada à rotina real das empresas.</h2>
+                  <h2 className={lc.landingHeading2Tight}>
+                    Produto digital pensado como ativo estratégico — não apenas entrega pontual.
+                  </h2>
 
                   <p className={lc.landingParagraph}>
-                    A DN Sistemas Corporativos atua no desenvolvimento de soluções digitais com foco em estrutura,
-                    operação e presença profissional. Nosso trabalho é transformar necessidades reais em ferramentas
-                    úteis, estáveis e alinhadas ao negócio.
+                    Trabalhamos com empresas que exigem clareza, performance e segurança. Da descoberta à entrega,
+                    priorizamos o que reduz atrito na operação, melhora decisões e mantém sua stack preparada para
+                    evolução contínua.
                   </p>
 
                   <p className={lc.landingParagraphLoose}>
-                    Em vez de soluções genéricas, buscamos construir sistemas, interfaces e sites que transmitam
-                    confiança, agilizem processos e apoiem o crescimento da empresa com clareza e consistência.
+                    Você ganha ritmo de projeto enxuto, comunicação objetiva com o time técnico e código em padrões
+                    profissionais — pronto para time interno ou parceiros trabalharem no futuro.
                   </p>
 
-                  <div className="row gy-3">
+                  <div className="row gy-4 gx-3">
                     <div className="col-sm-6">
                       <div className={lc.landingCardWhite}>
-                        <h3 className={lc.landingMiniHeading}>Visão corporativa</h3>
+                        <h3 className={lc.landingMiniHeading}>Disciplina de negócio</h3>
                         <p className={lc.landingParagraphNoMargin}>
-                          Soluções pensadas para empresas que precisam de organização, imagem forte e processos
-                          confiáveis.
+                          Soluções ancoradas em fluxo real, KPIs e governança — sem promessas genéricas.
                         </p>
                       </div>
                     </div>
 
                     <div className="col-sm-6">
                       <div className={lc.landingCardWhite}>
-                        <h3 className={lc.landingMiniHeading}>Execução prática</h3>
+                        <h3 className={lc.landingMiniHeading}>Execução senior</h3>
                         <p className={lc.landingParagraphNoMargin}>
-                          Projetos orientados à implementação real, com foco em entrega, clareza e resultado.
+                          Do desenho da experiência à infraestrutura: menos ruído, mais previsibilidade no prazo e no
+                          investimento.
                         </p>
                       </div>
                     </div>
@@ -176,27 +177,27 @@ export default function Home() {
 
         <section id="services" className={`section ${lc.landingSectionWhite}`}>
           <div className="container">
-            <div className="text-center mb-5">
-              <span className={`d-inline-block ${lc.landingEyebrow}`}>Serviços</span>
+            <div className={`text-center ${lc.landingSectionIntroWide} ${lc.landingSectionIntro}`}>
+              <span className={`d-inline-block ${lc.landingEyebrow}`}>O que fazemos</span>
               <h2 className={lc.landingHeading2}>
-                Soluções desenvolvidas para fortalecer a base digital da sua empresa
+                Tecnologia sob medida com foco em resultado financeiro e operacional
               </h2>
               <p className={`${lc.landingParagraphCenter}`}>
-                Atuamos em frentes essenciais para empresas que precisam de mais eficiência, melhor apresentação
-                institucional e ferramentas alinhadas ao seu fluxo de trabalho.
+                Cada linha de código existe para responder a uma pergunta de negócio: como ganhar velocidade,
+                reduzir custo de erro e sustentar crescimento com sistemas estáveis?
               </p>
             </div>
 
-            <div className="row gy-4">
+            <div className="row gy-5 gx-lg-4">
               <div className="col-lg-4">
                 <div className={lc.landingServiceCard}>
                   <div className={lc.landingServiceIcon}>
                     <i className="bi bi-diagram-3"></i>
                   </div>
-                  <h3 className={lc.landingServiceTitle}>Sistemas Corporativos</h3>
+                  <h3 className={lc.landingServiceTitle}>Software corporativo sob medida</h3>
                   <p className={lc.landingParagraphNoMargin}>
-                    Desenvolvimento de sistemas sob medida para organizar processos, centralizar informações, reduzir
-                    retrabalho e apoiar a tomada de decisão.
+                    Plataformas internas que unificam dados, eliminam gargalos e dão traçabilidade à operação —
+                    menos planilhas paralelas, mais uma fonte única da verdade.
                   </p>
                 </div>
               </div>
@@ -206,10 +207,10 @@ export default function Home() {
                   <div className={lc.landingServiceIcon}>
                     <i className="bi bi-window-stack"></i>
                   </div>
-                  <h3 className={lc.landingServiceTitle}>Sites Institucionais</h3>
+                  <h3 className={lc.landingServiceTitle}>Presença institucional de alta conversão</h3>
                   <p className={lc.landingParagraphNoMargin}>
-                    Criação de sites profissionais com identidade sólida, navegação clara e apresentação confiável dos
-                    serviços e diferenciais da empresa.
+                    Sites e portais pensados como canal comercial sério — narrativa clara, performance e autoridade de
+                    marca para fechar ciclo com clientes enterprise e decisores exigentes.
                   </p>
                 </div>
               </div>
@@ -219,10 +220,10 @@ export default function Home() {
                   <div className={lc.landingServiceIcon}>
                     <i className="bi bi-phone"></i>
                   </div>
-                  <h3 className={lc.landingServiceTitle}>Aplicações Empresariais</h3>
+                  <h3 className={lc.landingServiceTitle}>Produtos mobile e omnicanalidade</h3>
                   <p className={lc.landingParagraphNoMargin}>
-                    Soluções web e mobile voltadas à operação, acompanhamento de atividades, integração entre setores e
-                    expansão digital do negócio.
+                    Aplicações conectadas ao seu ecossistema: times no campo ou remotos ganham velocidade sem abrir mão
+                    de segurança, políticas e auditoria corporativa.
                   </p>
                 </div>
               </div>
@@ -233,16 +234,17 @@ export default function Home() {
         <section className={`section ${lc.landingSectionPadBottom}`}>
           <div className="container">
             <div className={lc.landingRibbon}>
-              <div className="row align-items-center gy-4">
+              <div className="row align-items-center gy-4 gx-lg-4">
                 <div className="col-lg-8">
-                  <h2 className={lc.landingRibbonTitle}>Sua empresa precisa de uma base digital mais forte?</h2>
+                  <h2 className={lc.landingRibbonTitle}>Pronto para transformar tecnologia em vantagem competitiva?</h2>
                   <p className={lc.landingRibbonText}>
-                    Podemos estruturar uma solução institucional ou corporativa alinhada ao momento do seu negócio.
+                    Agenda uma conversa objetiva para mapearmos cenário atual, pontos de alavanca e próximo passo
+                    viável para o seu time.
                   </p>
                 </div>
                 <div className="col-lg-4 text-lg-end">
                   <a href="#contact" className={`btn ${lc.landingRibbonBtn}`}>
-                    Solicitar orçamento
+                    Agendar análise
                   </a>
                 </div>
               </div>
@@ -252,24 +254,25 @@ export default function Home() {
 
         <section id="contact" className={`section ${lc.landingSectionSoft}`}>
           <div className="container">
-            <div className="text-center mb-5">
+            <div className={`text-center ${lc.landingSectionIntroWide} ${lc.landingSectionIntro}`}>
               <span className={`d-inline-block ${lc.landingEyebrow}`}>Contato</span>
-              <h2 className={lc.landingHeading2}>Vamos conversar sobre o que sua empresa precisa</h2>
+              <h2 className={lc.landingHeading2}>Fale diretamente com quem vai conduzir o seu projeto</h2>
               <p className={lc.landingParagraphCenter}>
-                Entre em contato para apresentar seu cenário, suas metas e o tipo de solução que você busca.
+                Descreva o contexto da empresa e o problema que você precisa resolver. Retornamos com próximos passos
+                e formato de trabalho mais adequados.
               </p>
             </div>
 
-            <div className="row gy-4">
+            <div className="row gy-5 gx-lg-5">
               <div className="col-lg-5">
                 <div className={lc.landingContactInfo}>
-                  <div className="d-flex align-items-start mb-4">
+                  <div className="d-flex align-items-start mb-5">
                     <div className={lc.landingContactIcon}>
                       <i className="bi bi-envelope"></i>
                     </div>
                     <div>
                       <h3 className={lc.landingMiniHeadingSm}>E-mail</h3>
-                      <p className={lc.landingParagraphNoMargin}>contato@dnsistemas.com.br</p>
+                      <p className={lc.landingParagraphNoMargin}>contato@antero.tech</p>
                     </div>
                   </div>
 
@@ -280,7 +283,7 @@ export default function Home() {
                     <div>
                       <h3 className={lc.landingMiniHeadingSm}>WhatsApp</h3>
                       <p className={lc.landingParagraphNoMargin}>
-                        Atendimento direto para orçamento e alinhamento inicial do projeto.
+                        Canal rápido para alinhar urgência de negócio, escopo inicial e formato de engajamento da ANTERO.
                       </p>
                     </div>
                   </div>
@@ -300,7 +303,8 @@ export default function Home() {
       <footer id="footer" className={`footer ${lc.landingFooter}`}>
         <div className="container text-center">
           <p className={lc.landingFooterText}>
-            © <strong className={lc.landingFooterStrong}>DN Sistemas Corporativos</strong>. Todos os direitos reservados.
+            © {new Date().getFullYear()}{' '}
+            <strong className={lc.landingFooterStrong}>ANTERO</strong>. Todos os direitos reservados.
           </p>
         </div>
       </footer>

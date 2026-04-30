@@ -43,10 +43,10 @@ export async function POST(request: Request) {
     from: process.env.MAIL_FROM!,
     to: [process.env.MAIL_TO!],
     replyTo: email,
-    subject: `[Contato Site] ${subject}`,
-    text: `Novo contato do site\n\nNome: ${name}\nE-mail: ${email}\nAssunto: ${subject}\n\nMensagem:\n${message}`,
+    subject: `[ANTERO Site] ${subject}`,
+    text: `Novo contato — site ANTERO\n\nNome: ${name}\nE-mail: ${email}\nAssunto: ${subject}\n\nMensagem:\n${message}`,
     html: `
-        <h2>Novo contato do site</h2>
+        <h2>Novo contato — site ANTERO</h2>
         <p><strong>Nome:</strong> ${escapeHtml(name)}</p>
         <p><strong>E-mail:</strong> ${escapeHtml(email)}</p>
         <p><strong>Assunto:</strong> ${escapeHtml(subject)}</p>

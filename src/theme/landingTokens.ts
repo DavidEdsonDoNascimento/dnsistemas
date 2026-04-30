@@ -79,9 +79,9 @@ export const landingTokens = {
   },
 
   spacing: {
-    sectionY: 96,
-    heroTopPad: 170,
-    heroBottomPad: 110,
+    sectionY: 120,
+    heroTopPad: 190,
+    heroBottomPad: 132,
   },
 
   carousel: {

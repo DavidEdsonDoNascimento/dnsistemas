@@ -39,17 +39,18 @@ export default function ContactForm() {
       const payload = (await response.json()) as { message?: string }
 
       if (!response.ok) {
-        throw new Error(payload.message ?? 'Nao foi possivel enviar sua mensagem agora.')
+        throw new Error(payload.message ?? 'Não foi possível enviar sua mensagem agora.')
       }
 
       setStatus({
         type: 'success',
-        message: 'Mensagem enviada com sucesso. Em breve entraremos em contato.',
+        message:
+          'Recebemos sua solicitação. Em breve um especialista ANTERO entra em contato com próximos passos.',
       })
       setFormData(initialFormData)
     } catch (error) {
       const message =
-        error instanceof Error ? error.message : 'Ocorreu um erro ao enviar a mensagem.'
+        error instanceof Error ? error.message : 'Erro ao enviar. Tente novamente ou use outro canal.'
       setStatus({ type: 'error', message })
     } finally {
       setIsSubmitting(false)
@@ -62,7 +63,7 @@ export default function ContactForm() {
         <input
           type="text"
           className={`form-control ${lc.formControlLanding}`}
-          placeholder="Seu nome"
+          placeholder="Nome completo"
           value={formData.name}
           onChange={(event) => setFormData((prev) => ({ ...prev, name: event.target.value }))}
           required
@@ -73,7 +74,7 @@ export default function ContactForm() {
         <input
           type="email"
           className={`form-control ${lc.formControlLanding}`}
-          placeholder="Seu e-mail"
+          placeholder="E-mail corporativo"
           value={formData.email}
           onChange={(event) => setFormData((prev) => ({ ...prev, email: event.target.value }))}
           required
@@ -84,7 +85,7 @@ export default function ContactForm() {
         <input
           type="text"
           className={`form-control ${lc.formControlLanding}`}
-          placeholder="Assunto"
+          placeholder="Ex.: sistema interno / site institucional / app operacional"
           value={formData.subject}
           onChange={(event) => setFormData((prev) => ({ ...prev, subject: event.target.value }))}
           required
@@ -95,7 +96,7 @@ export default function ContactForm() {
         <textarea
           className={`form-control ${lc.textareaLanding}`}
           rows={6}
-          placeholder="Descreva o que sua empresa precisa"
+          placeholder="Objetivos de negócio, público-alvo interno/externo, prazos e integrações relevantes."
           value={formData.message}
           onChange={(event) => setFormData((prev) => ({ ...prev, message: event.target.value }))}
           required
@@ -108,7 +109,7 @@ export default function ContactForm() {
           className={`btn ${lc.formSubmitLanding}`}
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'Enviando...' : 'Enviar mensagem'}
+          {isSubmitting ? 'Enviando...' : 'Solicitar proposta'}
         </button>
       </div>
 

@@ -59,15 +59,28 @@
 
 .landingHeroTitle {
   color: var(--dn-nav-icon);
-  max-width: 760px;
-  margin-bottom: 24px;
+  max-width: 720px;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.landingSectionIntro {
+  margin-bottom: 4rem;
+}
+
+.landingSectionIntroWide {
+  max-width: min(42rem, 92vw);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .landingHeroLead {
   color: var(--dn-overlay-muted);
-  font-size: 1.08rem;
-  max-width: 640px;
-  margin-bottom: 34px;
+  font-size: clamp(1.05rem, 1.05rem + 0.2vw, 1.2rem);
+  line-height: 1.65;
+  max-width: 560px;
+  margin-bottom: 40px;
 }
 
 .landingBtnPrimary {
@@ -88,7 +101,7 @@
 }
 
 .landingStatCard {
-  padding: 18px 20px;
+  padding: 20px 22px;
   border-radius: var(--dn-radius-md);
   background: var(--dn-glass-bg);
   border: 1px solid var(--dn-glass-border-weak);
@@ -140,8 +153,8 @@
 
 .landingEyebrow {
   display: inline-block;
-  margin-bottom: 18px;
-  padding: 8px 14px;
+  margin-bottom: 20px;
+  padding: 8px 16px;
   border-radius: var(--dn-radius-pill);
   background: var(--dn-chip-blue-bg);
   color: var(--dn-secondary);
@@ -154,12 +167,16 @@
 
 .landingHeading2 {
   color: var(--dn-primary);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
 }
 
 .landingHeading2Tight {
   color: var(--dn-primary);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  letter-spacing: -0.025em;
+  line-height: 1.18;
 }
 
 .landingParagraph {
@@ -174,8 +191,10 @@
 
 .landingParagraphCenter {
   color: var(--dn-muted);
-  max-width: 760px;
+  max-width: 42rem;
   margin: 0 auto;
+  line-height: 1.75;
+  font-size: 1.05rem;
 }
 
 .landingParagraphNoMargin {
@@ -199,7 +218,7 @@
   background: var(--dn-service-card-bg);
   border: 1px solid var(--dn-border);
   border-radius: var(--dn-radius-lg);
-  padding: 22px;
+  padding: 28px 26px;
   height: 100%;
 }
 
@@ -217,7 +236,7 @@
   background: var(--dn-service-card-bg);
   border: 1px solid var(--dn-border);
   border-radius: var(--dn-radius-xl);
-  padding: 28px;
+  padding: 36px 32px;
   height: 100%;
   box-shadow: var(--dn-shadow-card);
 }
@@ -237,19 +256,24 @@
 .landingServiceTitle {
   color: var(--dn-primary);
   margin-bottom: 14px;
+  font-size: 1.35rem;
+  font-weight: 700;
 }
 
 .landingRibbon {
   background: var(--dn-gradient-cta);
   border-radius: 30px;
-  padding: 42px 36px;
+  padding: clamp(44px, 5vw, 56px) clamp(36px, 4vw, 52px);
   color: var(--dn-nav-icon);
   box-shadow: var(--dn-shadow-cta-ribbon);
 }
 
 .landingRibbonTitle {
   color: var(--dn-nav-icon);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
 .landingRibbonText {

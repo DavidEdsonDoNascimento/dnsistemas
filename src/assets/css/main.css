@@ -4210,7 +4210,7 @@ section,
 .starter-section {
   /* Add your styles here */
 }
-/* ===== DN Sistemas — apenas fontes; cores ficam nos :root (--dn-* + aliases) ===== */
+/* ===== ANTERO — fontes; cores em :root (--dn-* + aliases) ===== */
 :root {
   --default-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --heading-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

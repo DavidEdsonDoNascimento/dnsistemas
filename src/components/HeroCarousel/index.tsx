@@ -24,11 +24,11 @@ export function HeroCarousel() {
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                 <Box sx={{ flex: 1, color: 'text.primary' }}>
                   <Typography variant="overline" sx={{ color: 'secondary.main', letterSpacing: 2 }}>
-                    Engenharia de Software Corporativa
+                    Plataforma &amp; dados
                   </Typography>
 
                   <Typography variant="h2" sx={{ fontWeight: 700, mb: 3 }}>
-                    Sistemas Corporativos Sob Medida
+                    Sistemas internos sob medida com traçabilidade e performance
                   </Typography>
 
                   <Typography
@@ -38,12 +38,12 @@ export function HeroCarousel() {
                       color: t.landing.carousel.textMuted,
                     })}
                   >
-                    Plataformas empresariais desenvolvidas para controle operacional, gestão de ativos e automação de
-                    processos internos.
+                    Desenvolvimento orientado à redução de custo oculto, automação inteligente e escalabilidade real —
+                    infraestrutura pronta para exigências enterprise.
                   </Typography>
 
                   <Button variant="contained" color="secondary" size="large">
-                    Solicitar Análise Técnica
+                    Solicitar proposta
                   </Button>
                 </Box>
 
@@ -106,11 +106,11 @@ export function HeroCarousel() {
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                 <Box sx={{ flex: 1, color: 'text.primary' }}>
                   <Typography variant="overline" sx={{ color: 'secondary.main', letterSpacing: 2 }}>
-                    Desenvolvimento Institucional Corporativo
+                    Marca institucional
                   </Typography>
 
                   <Typography variant="h2" sx={{ fontWeight: 700, mb: 3 }}>
-                    Sites Institucionais Estruturados
+                    Narrativa digital séria para fechar ciclo com clientes exigentes
                   </Typography>
 
                   <Typography
@@ -120,12 +120,12 @@ export function HeroCarousel() {
                       color: t.landing.carousel.textMuted,
                     })}
                   >
-                    Projetos desenvolvidos com foco em apresentação estratégica, organização de conteúdo e geração de
-                    oportunidades comerciais.
+                    Arquitetura de conteúdo, velocidade técnica e posicionamento alinhados à conversão e à credibilidade
+                    em cenários high-ticket e B2B.
                   </Typography>
 
                   <Button variant="contained" color="secondary" size="large">
-                    Conhecer Projetos
+                    Agendar análise
                   </Button>
                 </Box>
 
@@ -188,11 +188,11 @@ export function HeroCarousel() {
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                 <Box sx={{ flex: 1, color: 'text.primary' }}>
                   <Typography variant="overline" sx={{ color: 'secondary.main', letterSpacing: 2 }}>
-                    Desenvolvimento Mobile Corporativo
+                    Mobile &amp; operações
                   </Typography>
 
                   <Typography variant="h2" sx={{ fontWeight: 700, mb: 3 }}>
-                    Aplicativos Empresariais Integrados
+                    Apps conectados ao core do negócio — rapidez com governança
                   </Typography>
 
                   <Typography
@@ -202,12 +202,12 @@ export function HeroCarousel() {
                       color: t.landing.carousel.textMuted,
                     })}
                   >
-                    Aplicações móveis conectadas a sistemas e equipamentos, desenvolvidas com arquitetura robusta e foco em
-                    controle operacional.
+                    Interfaces móveis em continuidade com seu backend corporativo; foco em experiência sob pressão real,
+                    sync seguro e manutenibilidade ao longo do tempo.
                   </Typography>
 
                   <Button variant="contained" color="secondary" size="large">
-                    Conhecer Soluções Mobile
+                    Falar com especialista
                   </Button>
                 </Box>
 

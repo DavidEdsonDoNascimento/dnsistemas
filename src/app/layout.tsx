@@ -12,8 +12,9 @@ import '@/assets/vendor/bootstrap-icons/bootstrap-icons.css'
 import ThemeRegistry from '@/theme/ThemeRegistry'
 
 export const metadata: Metadata = {
-  title: 'DN Sistemas Corporativos',
-  description: 'Soluções em sistemas corporativos, sites institucionais e aplicações empresariais.',
+  title: 'ANTERO — Software sob medida para empresas',
+  description:
+    'Soluções de software sob medida que reduzem custo operacional, aceleram processos e escalam com o seu negócio.',
   icons: {
     icon: '/favicon_v1.ico',
   },

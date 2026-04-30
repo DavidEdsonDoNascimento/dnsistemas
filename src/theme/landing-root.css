@@ -52,9 +52,9 @@
   --dn-radius-hero: 26px;
   --dn-radius-xxl: 28px;
   --dn-radius-pill: 999px;
-  --dn-section-y: 96px;
-  --dn-hero-pt: 170px;
-  --dn-hero-pb: 110px;
+  --dn-section-y: 120px;
+  --dn-hero-pt: 190px;
+  --dn-hero-pb: 132px;
   --dn-carousel-muted: rgba(255, 255, 255, 0.85);
   --dn-carousel-g1: linear-gradient(135deg, #0a0a0a 0%, #0b0f14 100%);
   --dn-carousel-g2: linear-gradient(135deg, #0b0f14 0%, #050505 100%);

@@ -20,7 +20,7 @@ export function Header() {
         <Link href="/" className={lc.landingPlainLink}>
           <Image
             src="/antero_logo_header_croppezd.png"
-            alt="Antero software sob medida"
+            alt="ANTERO — software sob medida"
             width={280}
             height={64}
             priority
@@ -47,7 +47,7 @@ export function Header() {
         </Box>
 
         <Button variant="contained" color="primary">
-          Solicitar Análise
+          Agendar análise
         </Button>
       </Toolbar>
     </AppBar>
