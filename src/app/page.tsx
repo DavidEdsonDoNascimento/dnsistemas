@@ -262,8 +262,8 @@ export default function Home() {
                   <div className={lc.landingContactBlock}>
                     <h3 className={lc.landingMiniHeadingSm}>E-mail</h3>
                     <p className={lc.landingParagraphNoMargin}>
-                      <a href="mailto:contato@antero.tech" className={lc.landingContactLink}>
-                        contato@antero.tech
+                      <a href="mailto:contato@anterosistemas.com.br" className={lc.landingContactLink}>
+                        contato@anterosistemas.com.br
                       </a>
                     </p>
                   </div>
@@ -290,7 +290,9 @@ export default function Home() {
       <footer id="footer" className={`footer ${lc.landingFooter}`}>
         <div className="container">
           <p className={lc.landingFooterText}>
-            <span className={lc.landingFooterStrong}>© {new Date().getFullYear()} ANTERO</span>
+            <span suppressHydrationWarning className={lc.landingFooterStrong}>
+              © {new Date().getFullYear()} ANTERO
+            </span>
             <span className={lc.landingFooterSep}> · </span>
             <span className={lc.landingFooterSep}>Todos os direitos reservados.</span>
           </p>

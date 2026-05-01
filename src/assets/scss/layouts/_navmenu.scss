@@ -247,13 +247,14 @@
       top: 15px;
       right: 15px;
       margin-right: 0;
-      z-index: 9999;
+      z-index: 1400;
     }
 
     .navmenu {
       position: fixed;
       overflow: hidden;
       inset: 0;
+      z-index: 1350;
       background: rgba(33, 37, 41, 0.8);
       transition: 0.3s;
 

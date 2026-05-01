@@ -149,7 +149,8 @@ h6 {
   background-color: var(--background-color);
   padding: 20px 0;
   transition: all 0.5s;
-  z-index: 997;
+  /* Acima do conteúdo (Bootstrap fixed-top 1030 é sobrescrito aqui pela ordem do CSS). */
+  z-index: 1200;
 }
 
 .header .header-container {
@@ -464,13 +465,14 @@ h6 {
     top: 15px;
     right: 15px;
     margin-right: 0;
-    z-index: 9999;
+    z-index: 1400;
   }
 
   .mobile-nav-active .navmenu {
     position: fixed;
     overflow: hidden;
     inset: 0;
+    z-index: 1350;
     background: rgba(33, 37, 41, 0.8);
     transition: 0.3s;
   }

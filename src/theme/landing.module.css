@@ -40,6 +40,13 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* Ocultar CTA em telas pequenas: até Bootstrap xl (= MUI breakpoints.up('xl') em 1200px). */
+@media (max-width: 1199.98px) {
+  .landingHeaderCta {
+    display: none !important;
+  }
+}
+
 :global(.header) :global(.btn-getstarted).landingHeaderCta,
 :global(.header) :global(.btn-getstarted).landingHeaderCta:focus {
   border-radius: var(--dn-radius-pill);
@@ -54,6 +61,7 @@
   padding-top: clamp(96px, 11vw, var(--dn-hero-pt));
   padding-bottom: clamp(72px, 9vw, var(--dn-hero-pb));
   position: relative;
+  z-index: 0;
   overflow: hidden;
 }
 

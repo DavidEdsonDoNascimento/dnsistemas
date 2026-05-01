@@ -80,3 +80,9 @@
   --bs-primary-rgb: 37, 99, 235;
   --bs-secondary: rgba(161, 161, 170, 0.6);
 }
+
+/* Pilha inferior ao header fixo; evita conteúdo “ganhando” o overlay do menu. */
+main.main {
+  position: relative;
+  z-index: 0;
+}

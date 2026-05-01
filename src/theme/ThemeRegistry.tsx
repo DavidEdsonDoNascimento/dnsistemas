@@ -1,5 +1,6 @@
 'use client'
 
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v16-appRouter'
 import CssBaseline from '@mui/material/CssBaseline'
 import GlobalStyles from '@mui/material/GlobalStyles'
 import { ThemeProvider } from '@mui/material'
@@ -28,25 +29,27 @@ function getLegacyTemplateCssVariables(t: Theme): Record<string, string> {
 
 export default function ThemeRegistry({ children }: { children: ReactNode }) {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <GlobalStyles
-        styles={(t) => ({
-          ':root': {
-            ...getLandingCssVariables(t),
-            ...getLegacyTemplateCssVariables(t),
-          },
-          body: {
-            fontFamily: theme.typography.fontFamily,
-            backgroundColor: t.landing.palette.bodyBg,
-            color: t.landing.palette.muted,
-          },
-          'textarea.form-control': {
-            minHeight: 120,
-          },
-        })}
-      />
-      {children}
-    </ThemeProvider>
+    <AppRouterCacheProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <GlobalStyles
+          styles={(t) => ({
+            ':root': {
+              ...getLandingCssVariables(t),
+              ...getLegacyTemplateCssVariables(t),
+            },
+            body: {
+              fontFamily: theme.typography.fontFamily,
+              backgroundColor: t.landing.palette.bodyBg,
+              color: t.landing.palette.muted,
+            },
+            'textarea.form-control': {
+              minHeight: 120,
+            },
+          })}
+        />
+        {children}
+      </ThemeProvider>
+    </AppRouterCacheProvider>
   )
 }
