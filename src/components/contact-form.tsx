@@ -108,7 +108,7 @@ export default function ContactForm() {
           className={`btn ${lc.formSubmitLanding}`}
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'Enviando...' : 'Solicitar proposta'}
+          {isSubmitting ? 'Enviando...' : 'Solicitar um orçamento'}
         </button>
       </div>
 
