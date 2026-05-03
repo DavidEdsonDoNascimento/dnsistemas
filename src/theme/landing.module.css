@@ -34,8 +34,15 @@
    `backdrop-filter` do header (que cria containing block para `position: fixed`).
    ========================================================================== */
 
+/* Ordem dos itens no flex container do header.
+   O CSS legado do template Clarity (main.css L207-219) define `order` para
+   .header .logo (1), .header .btn-getstarted (2) e .header .navmenu (3) na
+   faixa ≤ 1200px. Como o botão toggle agora é filho direto do flex (e não
+   mais filho do <nav>), ele cairia em `order: 0` por default e apareceria
+   antes da logo. Damos um `order` alto para garantir que ele vá pro fim. */
 .landingDesktopNav {
   display: flex;
+  order: 2;
 }
 
 @media (max-width: 1199.98px) {
@@ -45,13 +52,14 @@
 }
 
 .landingMobileToggle {
+  order: 99;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: transparent;
   border: 0;
   padding: 4px 8px;
-  margin: 0 8px 0 auto;
+  margin: 0 0 0 auto;
   color: var(--dn-nav-icon);
   font-size: 28px;
   line-height: 1;
@@ -59,10 +67,15 @@
   transition: color 0.2s ease;
 }
 
-.landingMobileToggle:hover,
+.landingMobileToggle:hover {
+  color: var(--dn-secondary);
+}
+
 .landingMobileToggle:focus-visible {
   color: var(--dn-secondary);
-  outline: none;
+  outline: 2px solid var(--dn-secondary);
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
 @media (min-width: 1200px) {
@@ -151,6 +164,10 @@
 }
 
 .landingHeaderCta {
+  /* `order: 3` mantém o CTA à direita no desktop (logo: 0, nav: 2, CTA: 3).
+     No mobile (≤ 1199.98px) este botão é `display: none`, então a `order`
+     legada de `.header .btn-getstarted` (2) torna-se irrelevante. */
+  order: 3;
   background: linear-gradient(135deg, #2563eb, #1e40af);
   color: var(--dn-nav-icon);
   border-radius: var(--dn-radius-pill);
