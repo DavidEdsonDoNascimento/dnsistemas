@@ -2,6 +2,7 @@ import Script from 'next/script'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from '@/components/contact-form'
+import { getWhatsAppOrcamentoHref } from '@/lib/whatsapp-orcamento'
 import lc from '@/theme/landing.module.css'
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
         <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
           <Link href="/" className="logo d-flex align-items-center text-decoration-none">
             <Image
-              src="/antero_logo_header_cropped.png"
+              src="/antero_logo_v1.png"
               alt="ANTERO"
               width={280}
               height={64}
@@ -41,7 +42,7 @@ export default function Home() {
           </nav>
 
           <a className={`btn-getstarted ${lc.landingHeaderCta}`} href="#contact">
-            Falar com um especialista
+            Solicitar um orçamento
           </a>
         </div>
       </header>
@@ -65,7 +66,7 @@ export default function Home() {
 
                   <div className={`d-flex flex-wrap gap-2 ${lc.landingHeroActions}`}>
                     <a href="#contact" className={`btn ${lc.landingBtnPrimary}`}>
-                      Solicitar proposta
+                      Solicitar um orçamento
                     </a>
                     <a href="#services" className={`btn ${lc.landingBtnGhost}`}>
                       Ver soluções
@@ -268,12 +269,17 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <div className={lc.landingContactBlock}>
+                  <a
+                    className={`${lc.landingContactBlock} ${lc.landingContactBlockClickable}`}
+                    href={getWhatsAppOrcamentoHref()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <h3 className={lc.landingMiniHeadingSm}>WhatsApp</h3>
                     <p className={lc.landingParagraphNoMargin}>
                       Use para urgência ou agendar chamada rápida. O time responde no horário comercial.
                     </p>
-                  </div>
+                  </a>
                 </div>
               </div>
 

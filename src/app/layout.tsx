@@ -10,6 +10,7 @@ import '@/assets/css/main.css'
 import '@/theme/landing-root.css'
 import '@/assets/vendor/bootstrap-icons/bootstrap-icons.css'
 import ThemeRegistry from '@/theme/ThemeRegistry'
+import FloatingWhatsAppButton from '@/components/FloatingWhatsAppButton'
 
 export const metadata: Metadata = {
   title: 'ANTERO — Software sob medida',
@@ -28,7 +29,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
-        <ThemeRegistry>{children}</ThemeRegistry>
+        <ThemeRegistry>
+          {children}
+          <FloatingWhatsAppButton />
+        </ThemeRegistry>
       </body>
     </html>
   )

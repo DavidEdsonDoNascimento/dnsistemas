@@ -427,6 +427,29 @@
   margin-bottom: 0;
 }
 
+.landingContactBlockClickable {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: var(--dn-radius-sm);
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.landingContactBlockClickable:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 1px var(--dn-border);
+  transform: translateY(-1px);
+}
+
+.landingContactBlockClickable:focus-visible {
+  outline: 2px solid var(--dn-primary);
+  outline-offset: 2px;
+}
+
 .landingContactLink {
   color: var(--dn-primary);
   text-decoration: none;
