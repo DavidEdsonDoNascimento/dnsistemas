@@ -1,51 +1,13 @@
 import Script from 'next/script'
-import Image from 'next/image'
-import Link from 'next/link'
 import ContactForm from '@/components/contact-form'
+import SiteHeader from '@/components/SiteHeader'
 import { getWhatsAppOrcamentoHref } from '@/lib/whatsapp-orcamento'
 import lc from '@/theme/landing.module.css'
 
 export default function Home() {
   return (
     <>
-      <header id="header" className={`header d-flex align-items-center fixed-top ${lc.landingHeader}`}>
-        <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-          <Link href="/" className="logo d-flex align-items-center text-decoration-none">
-            <Image
-              src="/antero_logo_v1.png"
-              alt="ANTERO"
-              width={280}
-              height={64}
-              priority
-              className={lc.landingLogoImg}
-            />
-          </Link>
-
-          <nav id="navmenu" className="navmenu">
-            <ul>
-              <li>
-                <a href="#hero" className="active">
-                  Início
-                </a>
-              </li>
-              <li>
-                <a href="#about">Sobre</a>
-              </li>
-              <li>
-                <a href="#services">Serviços</a>
-              </li>
-              <li>
-                <a href="#contact">Contato</a>
-              </li>
-            </ul>
-            <i className={`mobile-nav-toggle d-xl-none bi bi-list ${lc.landingNavToggle}`}></i>
-          </nav>
-
-          <a className={`btn-getstarted ${lc.landingHeaderCta}`} href="#contact">
-            Solicitar um orçamento
-          </a>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="main">
         <section id="hero" className={`hero section ${lc.landingHero}`}>
