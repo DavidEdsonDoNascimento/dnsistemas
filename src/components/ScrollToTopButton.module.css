@@ -1,0 +1,66 @@
+.fab {
+  position: fixed;
+  right: 20px;
+  /* Empilhado acima do WhatsApp (bottom 20 + altura 58 + gap 12 = 90). */
+  bottom: 90px;
+  z-index: 9999;
+  width: 58px;
+  height: 58px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #1f2937;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.fab.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.fab:hover {
+  transform: translateY(0) scale(1.1);
+  background-color: #111827;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.fab:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fab {
+    transition: opacity 0.2s ease;
+    transform: none;
+  }
+
+  .fab.visible {
+    transform: none;
+  }
+
+  .fab:hover {
+    transform: none;
+  }
+}
