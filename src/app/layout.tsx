@@ -54,11 +54,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon_v1.ico', sizes: 'any' },
+      { url: '/favicon.ico', sizes: 'any' },
       { url: '/antero_logo_v1.png', type: 'image/png' },
     ],
     apple: '/antero_logo_v1.png',
-    shortcut: '/favicon_v1.ico',
+    shortcut: '/favicon.ico',
   },
   openGraph: {
     type: 'website',
