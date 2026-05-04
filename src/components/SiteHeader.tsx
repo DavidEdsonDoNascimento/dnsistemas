@@ -10,6 +10,9 @@ const NAV_LINKS = [
   { href: '#hero', label: 'Início' },
   { href: '#about', label: 'Sobre' },
   { href: '#services', label: 'Serviços' },
+  { href: '#como-funciona', label: 'Como funciona' },
+  { href: '#investimento', label: 'Investimento' },
+  { href: '#faq', label: 'Dúvidas' },
   { href: '#contact', label: 'Contato' },
 ]
 
@@ -59,10 +62,14 @@ export default function SiteHeader() {
         className={`header d-flex align-items-center fixed-top ${lc.landingHeader}`}
       >
         <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-          <Link href="/" className="logo d-flex align-items-center text-decoration-none">
+          <Link
+            href="/"
+            className="logo d-flex align-items-center text-decoration-none"
+            aria-label="ANTERO Sistemas — Desenvolvimento de software sob medida"
+          >
             <Image
               src="/antero_logo_v1.png"
-              alt="ANTERO"
+              alt="ANTERO Sistemas — Desenvolvimento de software sob medida"
               width={280}
               height={64}
               priority
@@ -91,7 +98,11 @@ export default function SiteHeader() {
             onClick={toggleMobile}
           />
 
-          <a className={`btn-getstarted ${lc.landingHeaderCta}`} href="#contact">
+          <a
+            className={`btn-getstarted ${lc.landingHeaderCta}`}
+            href="#contact"
+            aria-label="Solicitar orçamento de software personalizado"
+          >
             Solicitar um orçamento
           </a>
         </div>

@@ -703,6 +703,173 @@
   display: block;
 }
 
+/* ==========================================================================
+   Step number (Como funciona) — chip numerado para os 4 cards do processo.
+   ========================================================================== */
+.landingStepNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--dn-secondary);
+  background: var(--dn-icon-blue-tint);
+  border: 1px solid var(--dn-glass-border);
+}
+
+/* ==========================================================================
+   Lista com checkmarks (Benefícios) — semântica `<ul>` com marcador custom.
+   ========================================================================== */
+.landingCheckList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.landingCheckList li {
+  position: relative;
+  padding: 14px 16px 14px 48px;
+  background: var(--dn-service-card-bg);
+  border: 1px solid var(--dn-border);
+  border-radius: var(--dn-radius-md);
+  color: var(--dn-muted);
+  font-size: 0.9625rem;
+  line-height: 1.6;
+  box-shadow: var(--dn-shadow-card);
+}
+
+.landingCheckList li::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--dn-icon-blue-tint);
+  border: 1px solid var(--dn-glass-border);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 14px;
+}
+
+.landingCheckList li strong {
+  color: var(--dn-primary);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   FAQ — usa <details>/<summary> nativos para ficar acessível e indexável.
+   ========================================================================== */
+.landingFaqWrap {
+  display: grid;
+  gap: 12px;
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.landingFaqItem {
+  background: var(--dn-service-card-bg);
+  border: 1px solid var(--dn-border);
+  border-radius: var(--dn-radius-md);
+  padding: 0;
+  box-shadow: var(--dn-shadow-card);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.landingFaqItem[open] {
+  border-color: color-mix(in srgb, var(--dn-secondary), var(--dn-border) 50%);
+}
+
+.landingFaqQuestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.landingFaqQuestion::-webkit-details-marker {
+  display: none;
+}
+
+.landingFaqQuestion:focus-visible {
+  outline: 2px solid var(--dn-secondary);
+  outline-offset: -2px;
+  border-radius: var(--dn-radius-md);
+}
+
+.landingFaqQuestionText {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
+  color: var(--dn-primary);
+}
+
+.landingFaqIcon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--dn-secondary);
+  background: var(--dn-icon-blue-tint);
+  border: 1px solid var(--dn-glass-border);
+  transition: transform 0.2s ease;
+}
+
+.landingFaqItem[open] .landingFaqIcon {
+  transform: rotate(45deg);
+}
+
+.landingFaqAnswer {
+  margin: 0;
+  padding: 0 20px 20px;
+  color: var(--dn-muted);
+  font-size: 0.9625rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 575.98px) {
+  .landingFaqQuestion {
+    padding: 16px;
+  }
+
+  .landingFaqAnswer {
+    padding: 0 16px 16px;
+  }
+
+  .landingFaqQuestionText {
+    font-size: 0.95rem;
+  }
+
+  .landingCheckList li {
+    padding: 12px 14px 12px 44px;
+    font-size: 0.9rem;
+  }
+
+  .landingCheckList li::before {
+    top: 14px;
+    left: 12px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .landingHeroLayout {
     --bs-gutter-y: 20px;
