@@ -2,7 +2,6 @@
 
 import { usePathname } from 'next/navigation'
 import AppBar from '@mui/material/AppBar'
-import Avatar from '@mui/material/Avatar'
 import Box from '@mui/material/Box'
 import IconButton from '@mui/material/IconButton'
 import Stack from '@mui/material/Stack'
@@ -12,10 +11,13 @@ import Typography from '@mui/material/Typography'
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
 import NotificationsNoneRoundedIcon from '@mui/icons-material/NotificationsNoneRounded'
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded'
+import UserMenu from '@/features/auth/components/UserMenu'
+import type { AuthUser } from '@/features/auth/types'
 import { PAINEL_NAV_ITEMS } from '../config/navigation'
 
 export interface TopbarProps {
   onOpenSidebar: () => void
+  user?: AuthUser | null
 }
 
 function currentSectionLabel(pathname: string): string {
@@ -27,7 +29,7 @@ function currentSectionLabel(pathname: string): string {
   return startsWith?.label ?? 'Painel'
 }
 
-export default function Topbar({ onOpenSidebar }: TopbarProps) {
+export default function Topbar({ onOpenSidebar, user = null }: TopbarProps) {
   const pathname = usePathname() ?? '/painel'
   const section = currentSectionLabel(pathname)
 
@@ -99,31 +101,7 @@ export default function Topbar({ onOpenSidebar }: TopbarProps) {
             </IconButton>
           </Tooltip>
 
-          <Box sx={{ pl: 1.25, ml: 0.5, borderLeft: '1px solid rgba(255,255,255,0.08)' }}>
-            <Stack direction="row" alignItems="center" spacing={1.25}>
-              <Avatar
-                sx={{
-                  width: 34,
-                  height: 34,
-                  bgcolor: 'rgba(37,99,235,0.18)',
-                  color: '#93C5FD',
-                  fontSize: '0.85rem',
-                  fontWeight: 600,
-                  border: '1px solid rgba(37,99,235,0.28)',
-                }}
-              >
-                AS
-              </Avatar>
-              <Box sx={{ display: { xs: 'none', md: 'block' }, lineHeight: 1.15 }}>
-                <Typography variant="body2" sx={{ color: '#FFF', fontWeight: 600 }}>
-                  Antero Admin
-                </Typography>
-                <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-                  Equipe interna
-                </Typography>
-              </Box>
-            </Stack>
-          </Box>
+          <UserMenu user={user} />
         </Stack>
       </Toolbar>
     </AppBar>

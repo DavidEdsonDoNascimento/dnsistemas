@@ -3,18 +3,20 @@
 import { useCallback, useState, type ReactNode } from 'react'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
+import type { AuthUser } from '@/features/auth/types'
 import Sidebar, { SIDEBAR_WIDTH } from './Sidebar'
 import Topbar from './Topbar'
 
 export interface PainelShellProps {
   children: ReactNode
+  user?: AuthUser | null
 }
 
 /**
  * Estrutura visual do painel: Sidebar (fixa em ≥ lg, drawer em < lg) + Topbar + main.
  * Componente client por carregar estado do drawer mobile.
  */
-export default function PainelShell({ children }: PainelShellProps) {
+export default function PainelShell({ children, user = null }: PainelShellProps) {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const closeMobile = useCallback(() => setMobileOpen(false), [])
@@ -61,7 +63,7 @@ export default function PainelShell({ children }: PainelShellProps) {
 
       {/* Conteúdo */}
       <Box sx={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column' }}>
-        <Topbar onOpenSidebar={openMobile} />
+        <Topbar onOpenSidebar={openMobile} user={user} />
         <Box
           component="main"
           sx={{
