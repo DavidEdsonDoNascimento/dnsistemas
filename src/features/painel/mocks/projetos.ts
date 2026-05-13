@@ -1,0 +1,58 @@
+import type { Projeto } from '../types'
+
+export const PROJETOS_MOCK: Projeto[] = [
+  {
+    id: 'p-001',
+    nome: 'ERP Confecção Vega',
+    cliente: 'Vega Têxtil',
+    responsavel: 'Davi Ribeiro',
+    prazo: '15/06/2026',
+    progresso: 72,
+    status: { label: 'Em andamento', tone: 'info' },
+  },
+  {
+    id: 'p-002',
+    nome: 'Portal do cliente — NorthLog',
+    cliente: 'NorthLog Logística',
+    responsavel: 'Marina Souza',
+    prazo: '30/05/2026',
+    progresso: 90,
+    status: { label: 'Homologação', tone: 'warning' },
+  },
+  {
+    id: 'p-003',
+    nome: 'Automação de PCP — Ferraz',
+    cliente: 'Indústria Ferraz',
+    responsavel: 'Carla Bento',
+    prazo: '02/08/2026',
+    progresso: 18,
+    status: { label: 'Descoberta', tone: 'neutral' },
+  },
+  {
+    id: 'p-004',
+    nome: 'App de campo — AgroSul',
+    cliente: 'AgroSul Cooperativa',
+    responsavel: 'Pedro Lemos',
+    prazo: '10/07/2026',
+    progresso: 45,
+    status: { label: 'Em andamento', tone: 'info' },
+  },
+  {
+    id: 'p-005',
+    nome: 'Integração ERP/E-commerce — Loja Alma',
+    cliente: 'Loja Alma',
+    responsavel: 'Davi Ribeiro',
+    prazo: '04/06/2026',
+    progresso: 100,
+    status: { label: 'Concluído', tone: 'success' },
+  },
+  {
+    id: 'p-006',
+    nome: 'BI operacional — Clínica Saúde+',
+    cliente: 'Clínica Saúde+',
+    responsavel: 'Marina Souza',
+    prazo: '22/09/2026',
+    progresso: 8,
+    status: { label: 'Bloqueado', tone: 'error' },
+  },
+]

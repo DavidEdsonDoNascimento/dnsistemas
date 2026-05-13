@@ -1,0 +1,58 @@
+import type { MovimentoFinanceiro } from '../types'
+
+export const FINANCEIRO_MOCK: MovimentoFinanceiro[] = [
+  {
+    id: 'f-001',
+    descricao: 'Marco 3 — ERP Confecção Vega',
+    categoria: 'Receita de projeto',
+    data: '12/05/2026',
+    valor: 28500,
+    tipo: 'entrada',
+    status: { label: 'Recebido', tone: 'success' },
+  },
+  {
+    id: 'f-002',
+    descricao: 'Mensalidade SaaS — NorthLog',
+    categoria: 'Recorrência',
+    data: '10/05/2026',
+    valor: 4200,
+    tipo: 'entrada',
+    status: { label: 'Recebido', tone: 'success' },
+  },
+  {
+    id: 'f-003',
+    descricao: 'Infraestrutura AWS',
+    categoria: 'Custo operacional',
+    data: '08/05/2026',
+    valor: 1860,
+    tipo: 'saida',
+    status: { label: 'Pago', tone: 'neutral' },
+  },
+  {
+    id: 'f-004',
+    descricao: 'Marco 1 — Automação Ferraz',
+    categoria: 'Receita de projeto',
+    data: '05/05/2026',
+    valor: 14000,
+    tipo: 'entrada',
+    status: { label: 'Pendente', tone: 'warning' },
+  },
+  {
+    id: 'f-005',
+    descricao: 'Licença ferramentas — anual',
+    categoria: 'Custo operacional',
+    data: '02/05/2026',
+    valor: 9200,
+    tipo: 'saida',
+    status: { label: 'Pago', tone: 'neutral' },
+  },
+  {
+    id: 'f-006',
+    descricao: 'Consultoria — AgroSul',
+    categoria: 'Receita de projeto',
+    data: '28/04/2026',
+    valor: 7800,
+    tipo: 'entrada',
+    status: { label: 'Atrasado', tone: 'error' },
+  },
+]

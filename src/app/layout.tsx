@@ -5,7 +5,6 @@ import '@/assets/css/main.css'
 import '@/theme/landing-root.css'
 import '@/assets/vendor/bootstrap-icons/bootstrap-icons.css'
 import ThemeRegistry from '@/theme/ThemeRegistry'
-import FloatingButtons from '@/components/FloatingButtons'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://anterosistemas.com.br'
 const SITE_NAME = 'ANTERO Sistemas'
@@ -117,10 +116,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://wa.me" />
       </head>
       <body>
-        <ThemeRegistry>
-          {children}
-          <FloatingButtons />
-        </ThemeRegistry>
+        <ThemeRegistry>{children}</ThemeRegistry>
       </body>
     </html>
   )

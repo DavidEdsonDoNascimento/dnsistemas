@@ -1,0 +1,58 @@
+import type { Cliente } from '../types'
+
+export const CLIENTES_MOCK: Cliente[] = [
+  {
+    id: 'c-001',
+    nome: 'Vega Têxtil',
+    segmento: 'Indústria',
+    contato: 'compras@vegatextil.com.br',
+    cidade: 'Blumenau / SC',
+    projetosAtivos: 2,
+    status: { label: 'Ativo', tone: 'success' },
+  },
+  {
+    id: 'c-002',
+    nome: 'NorthLog Logística',
+    segmento: 'Logística',
+    contato: 'ti@northlog.com.br',
+    cidade: 'Itajaí / SC',
+    projetosAtivos: 1,
+    status: { label: 'Ativo', tone: 'success' },
+  },
+  {
+    id: 'c-003',
+    nome: 'Indústria Ferraz',
+    segmento: 'Indústria',
+    contato: 'contato@ferraz.ind.br',
+    cidade: 'Joinville / SC',
+    projetosAtivos: 1,
+    status: { label: 'Prospect', tone: 'info' },
+  },
+  {
+    id: 'c-004',
+    nome: 'AgroSul Cooperativa',
+    segmento: 'Agronegócio',
+    contato: 'sistemas@agrosul.coop.br',
+    cidade: 'Chapecó / SC',
+    projetosAtivos: 1,
+    status: { label: 'Ativo', tone: 'success' },
+  },
+  {
+    id: 'c-005',
+    nome: 'Loja Alma',
+    segmento: 'Varejo',
+    contato: 'gerencia@lojaalma.com.br',
+    cidade: 'Florianópolis / SC',
+    projetosAtivos: 0,
+    status: { label: 'Inativo', tone: 'neutral' },
+  },
+  {
+    id: 'c-006',
+    nome: 'Clínica Saúde+',
+    segmento: 'Saúde',
+    contato: 'diretoria@saudemais.com.br',
+    cidade: 'Curitiba / PR',
+    projetosAtivos: 1,
+    status: { label: 'Atenção', tone: 'warning' },
+  },
+]
