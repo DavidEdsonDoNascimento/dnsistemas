@@ -7,7 +7,7 @@
  */
 
 /** Apenas dígitos, com DDI (ex.: Brasil 55 + DDD + número). */
-export const WHATSAPP_BUSINESS_NUMBER = '5547997011323'
+export const WHATSAPP_BUSINESS_NUMBER = '5547996824402'
 
 export const WHATSAPP_PREFILL_MESSAGE =
   'Oi, vim pelo site da Antero sistemas e gostaria de solicitar um orçamento.'

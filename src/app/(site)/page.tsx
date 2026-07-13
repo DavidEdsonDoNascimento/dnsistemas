@@ -69,7 +69,7 @@ const ORGANIZATION_SCHEMA = {
       contactPoint: [
         {
           '@type': 'ContactPoint',
-          telephone: '+55 47 99701-1323',
+          telephone: '+55 47 99682-4402',
           contactType: 'sales',
           areaServed: 'BR',
           availableLanguage: ['Portuguese'],
@@ -83,7 +83,7 @@ const ORGANIZATION_SCHEMA = {
       name: 'ANTERO Sistemas',
       image: `${SITE_URL}/antero_logo_v1.png`,
       url: SITE_URL,
-      telephone: '+55 47 99701-1323',
+      telephone: '+55 47 99682-4402',
       email: 'contato@anterosistemas.com.br',
       priceRange: '$$',
       address: {
