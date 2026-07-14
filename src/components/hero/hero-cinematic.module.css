@@ -1,0 +1,187 @@
+/* Hero cinematográfica — vídeo full-bleed ao fundo, conteúdo centralizado por cima. */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+  /* O header é fixo: reserva espaço para o conteúdo não passar por baixo dele. */
+  padding-top: clamp(96px, 12vh, 140px);
+  padding-bottom: clamp(96px, 14vh, 160px);
+  background: var(--dn-gradient);
+}
+
+/* ---------- Camada 1 — vídeo ---------- */
+
+.videoLayer {
+  position: absolute;
+  /* Folga vertical: o parallax desloca ±60px e não pode revelar borda vazia. */
+  inset: -80px 0;
+  /* z-index 0 (e não -1): camada negativa depende do contexto de empilhamento do pai e
+     acaba atrás de qualquer background herdado. Os overlays vêm depois no DOM e, com
+     z-index automático, pintam por cima do vídeo; o conteúdo fica em z-index 1. */
+  z-index: 0;
+}
+
+.video,
+.videoFallback {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.videoFallback {
+  background: var(--dn-gradient);
+}
+
+/* ---------- Camada 2 — legibilidade ---------- */
+
+/* Escurecimento vertical: forte no topo (sob o header) e no rodapé (emenda com a
+   próxima seção), leve no meio. */
+.scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 11, 25, 0.6) 0%,
+    rgba(8, 14, 34, 0.22) 40%,
+    rgba(6, 10, 22, 0.55) 82%,
+    rgba(6, 10, 20, 0.9) 100%
+  );
+}
+
+/* Escurecimento radial atrás do texto — dá contraste ao H1 sem apagar o vídeo. */
+.spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 62% 50% at 50% 50%,
+    rgba(4, 8, 20, 0.42),
+    transparent 76%
+  );
+}
+
+/* Vinheta + tingimento azul/violeta nos cantos: integra o vídeo à paleta da ANTERO. */
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 12% 18%, rgba(37, 99, 235, 0.16), transparent 56%),
+    radial-gradient(ellipse at 88% 82%, rgba(139, 92, 246, 0.14), transparent 58%),
+    radial-gradient(ellipse at center, transparent 52%, rgba(4, 7, 16, 0.6) 100%);
+}
+
+/* Grão de filme sutil — tira o aspecto "digital limpo demais" do vídeo. */
+.grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ---------- Camada 3 — conteúdo ---------- */
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+.eyebrow {
+  margin-bottom: 0;
+}
+
+.title {
+  /* Sobrepõe o max-width de 16ch da landing: aqui o H1 é centralizado e mais largo. */
+  max-width: 20ch;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  text-shadow: 0 2px 30px rgba(2, 6, 16, 0.55);
+}
+
+.lead {
+  max-width: 52ch;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  color: rgba(226, 232, 240, 0.88);
+  text-shadow: 0 1px 18px rgba(2, 6, 16, 0.6);
+}
+
+.actions {
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  justify-content: center;
+}
+
+.meta {
+  margin-top: 2.5rem;
+  backdrop-filter: blur(6px);
+}
+
+/* ---------- Seta de rolagem ---------- */
+
+.scrollCue {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  translate: -50% 0;
+  z-index: 1;
+  display: inline-flex;
+  color: rgba(226, 232, 240, 0.55);
+  font-size: 1.5rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.scrollCue:hover {
+  color: rgba(226, 232, 240, 0.9);
+}
+
+/* ---------- Faixa de destaques (cards que antes ficavam dentro da Hero) ---------- */
+
+.highlights {
+  padding: clamp(40px, 5vw, 64px) 0;
+  background: var(--dn-gradient-soft);
+  border-bottom: 1px solid var(--dn-border);
+}
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width: 767.98px) {
+  .hero {
+    min-height: 92svh;
+  }
+
+  .title {
+    max-width: 100%;
+  }
+
+  .actions :global(.btn) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .scrollCue {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollCue {
+    display: none;
+  }
+}
