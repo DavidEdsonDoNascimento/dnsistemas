@@ -114,6 +114,7 @@ Todas dentro de `src/app/(site)/page.tsx`. Cada seção tem `id` e `aria-labelle
 | `FloatingWhatsAppButton` | `src/components/FloatingWhatsAppButton.tsx` (+ `.module.css`) | CTA de WhatsApp |
 | `ScrollToTopButton` | `src/components/ScrollToTopButton.tsx` (+ `.module.css`) | Voltar ao topo |
 | ⚠ `Header` | `src/components/Header/index.tsx` | **ÓRFÃO** — não é importado por ninguém e aponta para uma imagem inexistente (`antero_logo_header_croppezd.png`, com typo). Ver `docs/TECHNICAL_OVERVIEW.md` §7 |
+| ⚠ `HeroCinematic` | `src/components/hero/HeroCinematic.tsx` (+ `hero-cinematic.module.css`) | **DESATIVADO** — o Hero Cinemático foi temporariamente desativado por ainda não fazer parte da versão atual do site. A implementação foi preservada para futura reativação. Não é importado por ninguém e está excluído do build via `exclude` no `tsconfig.json` (depende de `framer-motion`, não instalada). Instruções de reativação no cabeçalho do próprio arquivo |
 
 ### Autenticação (`src/features/auth/`)
 `LoginCard`, `LoginForm`, `UserMenu` · server actions `sign-in-google`, `sign-in-password`, `sign-out` · clients `supabase-browser` / `supabase-server` · `session/get-user.ts`.

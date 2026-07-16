@@ -1,3 +1,14 @@
+/**
+ * ⚠ TEMPORARIAMENTE DESATIVADO — Hero Cinemático.
+ *
+ * Este componente NÃO faz parte da versão atual do site e está excluído do build
+ * via "exclude" no tsconfig.json (depende de `framer-motion`, que não está instalada).
+ *
+ * Para reativar:
+ * 1. Instalar a dependência: `npm install framer-motion`
+ * 2. Remover "src/components/hero/HeroCinematic.tsx" do "exclude" em tsconfig.json
+ * 3. Importar e renderizar `HeroCinematic` onde desejado.
+ */
 'use client'
 
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
