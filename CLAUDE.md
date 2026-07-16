@@ -28,6 +28,7 @@ O que **não** é papel do Claude aqui: decidir sozinho mudanças de escopo, arq
    - Stack, dependências, scripts → `docs/TECHNICAL_OVERVIEW.md`
    - Rotas, seções, componentes → `docs/SITE_STRUCTURE.md`
    - Imagens e assets → `docs/ASSETS_AND_IMAGES.md`
+   - Imagem de compartilhamento (Open Graph/Twitter) → `docs/SOCIAL_SHARING.md`
    - Fluxo de trabalho e validação → `docs/DEVELOPMENT_WORKFLOW.md`
 
 2. **Uma tarefa pequena por vez.** Nada de "aproveitei e também arrumei X". Se surgir outro problema durante a execução, **reporte** e aguarde nova aprovação — não corrija por conta própria.

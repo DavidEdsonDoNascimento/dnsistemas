@@ -68,9 +68,9 @@ export const metadata: Metadata = {
     description: DEFAULT_DESCRIPTION,
     images: [
       {
-        url: '/antero_logo_v1.png',
-        width: 1200,
-        height: 630,
+        url: '/antero-encaminhamento.png',
+        width: 1731,
+        height: 909,
         alt: 'ANTERO Sistemas — Desenvolvimento de software sob medida',
       },
     ],
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
-    images: ['/antero_logo_v1.png'],
+    images: ['/antero-encaminhamento.png'],
   },
   robots: {
     index: true,

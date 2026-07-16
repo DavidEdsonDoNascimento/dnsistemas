@@ -25,13 +25,14 @@ Esta é a lista **completa** do que a varredura encontrou sendo usado:
 
 | Imagem | Onde é usada |
 |---|---|
-| `/antero_logo_v1.png` | `src/app/layout.tsx` (ícones, Open Graph, Twitter Card, apple-touch) · `src/app/(site)/page.tsx` (JSON-LD, linhas 62 e 84) · `src/components/SiteHeader.tsx:71` · `src/features/auth/components/LoginCard.tsx:53` |
+| `/antero_logo_v1.png` | `src/app/layout.tsx` (ícones, apple-touch) · `src/app/(site)/page.tsx` (JSON-LD, linhas 62 e 84) · `src/components/SiteHeader.tsx:71` · `src/features/auth/components/LoginCard.tsx:53` |
+| `/antero-encaminhamento.png` | `src/app/layout.tsx` (Open Graph e Twitter Card) — **imagem oficial de compartilhamento**, 1731×909 px (ver `docs/SOCIAL_SHARING.md`) |
 | `/favicon.ico` | `src/app/layout.tsx` (`icon` e `shortcut`) |
 | `/assets/img/illustration/illustration-14.webp` | `src/app/(site)/page.tsx:228` — ilustração do **hero** |
 | `/assets/img/about/about-square-8.webp` | `src/app/(site)/page.tsx:252` — seção **about** |
 | ⚠ `/antero_logo_header_croppezd.png` | `src/components/Header/index.tsx:22` — **referência quebrada** (ver §4) |
 
-**Conclusão importante:** de todas as imagens do repositório, apenas **quatro** estão realmente em uso na aplicação. Todo o resto é template não utilizado ou material preparado para uso futuro.
+**Conclusão importante:** de todas as imagens do repositório, apenas **cinco** estão realmente em uso na aplicação. Todo o resto é template não utilizado ou material preparado para uso futuro.
 
 ---
 
