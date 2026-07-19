@@ -168,8 +168,8 @@
      No mobile (≤ 1199.98px) este botão é `display: none`, então a `order`
      legada de `.header .btn-getstarted` (2) torna-se irrelevante. */
   order: 3;
-  background: linear-gradient(135deg, #2563eb, #1e40af);
-  color: var(--dn-nav-icon);
+  background: linear-gradient(135deg, #b08d57, #8b6d41);
+  color: var(--dn-on-light-surface);
   border-radius: var(--dn-radius-pill);
   padding: 10px 18px;
   font-weight: 600;
@@ -267,15 +267,15 @@
 }
 
 .landingBtnPrimary {
-  background: linear-gradient(135deg, #2563eb, #1e40af);
-  color: var(--dn-nav-icon);
+  background: linear-gradient(135deg, #b08d57, #8b6d41);
+  color: var(--dn-on-light-surface);
   border-radius: var(--dn-radius-pill);
   padding: 13px 24px;
   font-weight: 700;
   font-size: 0.9375rem;
   letter-spacing: -0.015em;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 16px 34px rgba(30, 64, 175, 0.36);
+  box-shadow: 0 16px 34px rgba(139, 109, 65, 0.36);
 }
 
 .landingBtnGhost {
@@ -538,15 +538,15 @@
 }
 
 .landingRibbonBtn {
-  background: linear-gradient(135deg, #2563eb, #1e40af);
-  color: var(--dn-nav-icon);
+  background: linear-gradient(135deg, #b08d57, #8b6d41);
+  color: var(--dn-on-light-surface);
   border-radius: var(--dn-radius-pill);
   padding: 12px 22px;
   font-weight: 600;
   font-size: 0.9375rem;
   border: 1px solid rgba(255, 255, 255, 0.14);
   letter-spacing: -0.015em;
-  box-shadow: 0 16px 34px rgba(30, 64, 175, 0.34);
+  box-shadow: 0 16px 34px rgba(139, 109, 65, 0.34);
 }
 
 .landingContactInfo {
@@ -658,15 +658,15 @@
 }
 
 .formSubmitLanding {
-  background: linear-gradient(135deg, #2563eb, #1e40af);
-  color: var(--dn-nav-icon);
+  background: linear-gradient(135deg, #b08d57, #8b6d41);
+  color: var(--dn-on-light-surface);
   border-radius: var(--dn-radius-pill);
   padding: 12px 22px;
   font-weight: 600;
   font-size: 0.9375rem;
   letter-spacing: -0.015em;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 16px 34px rgba(30, 64, 175, 0.3);
+  box-shadow: 0 16px 34px rgba(139, 109, 65, 0.3);
 }
 
 .formSubmitLanding[disabled] {
@@ -755,7 +755,7 @@
   border-radius: 999px;
   background: var(--dn-icon-blue-tint);
   border: 1px solid var(--dn-glass-border);
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b08d57' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 14px 14px;

@@ -25,7 +25,7 @@ export default function LoginCard({ next, initialError }: LoginCardProps) {
         px: 2,
         py: 4,
         backgroundImage:
-          'radial-gradient(circle at 20% 20%, rgba(37,99,235,0.12), transparent 28%), radial-gradient(circle at 82% 30%, rgba(30,64,175,0.10), transparent 24%)',
+          'radial-gradient(circle at 20% 20%, rgba(176,141,87,0.12), transparent 28%), radial-gradient(circle at 82% 30%, rgba(139,109,65,0.10), transparent 24%)',
       }}
     >
       <Box

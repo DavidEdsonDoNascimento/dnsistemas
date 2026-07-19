@@ -223,16 +223,6 @@ export default function Home() {
                       empresarial sob medida.
                     </p>
                   </div>
-                  <div className={lc.landingHeroVisual}>
-                    <img
-                      src="/assets/img/illustration/illustration-14.webp"
-                      alt="Tela de dashboard de sistema empresarial sob medida desenvolvido pela ANTERO Sistemas"
-                      className={`img-fluid ${lc.landingHeroVisualImg}`}
-                      loading="eager"
-                      decoding="async"
-                      fetchPriority="high"
-                    />
-                  </div>
                 </div>
               </div>
             </div>
@@ -246,18 +236,6 @@ export default function Home() {
         >
           <div className="container">
             <div className="row align-items-start gy-5 gx-lg-5">
-              <div className="col-lg-6">
-                <div className={lc.landingAboutFigure}>
-                  <img
-                    src="/assets/img/about/about-square-8.webp"
-                    className={`img-fluid ${lc.landingAboutImg}`}
-                    alt="Equipe sênior de engenharia de software da ANTERO Sistemas trabalhando em projeto sob medida"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-              </div>
-
               <div className="col-lg-6">
                 <div className={lc.landingAboutContent}>
                   <span className={lc.landingEyebrow}>Empresa de software no Brasil</span>

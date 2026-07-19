@@ -39,7 +39,7 @@ export default function DashboardPage() {
               sx={{
                 width: `${r.progresso}%`,
                 height: '100%',
-                bgcolor: '#2563EB',
+                bgcolor: '#B08D57',
               }}
             />
           </Box>

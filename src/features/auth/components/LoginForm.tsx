@@ -120,12 +120,13 @@ export default function LoginForm({ next = '/painel', initialError = null }: Log
             sx={{
               mt: 0.5,
               py: 1.25,
-              bgcolor: '#2563EB',
+              bgcolor: '#B08D57',
+              color: '#0A0A0A',
               fontWeight: 600,
-              '&:hover': { bgcolor: '#1D4ED8' },
+              '&:hover': { bgcolor: '#8B6D41' },
               '&.Mui-disabled': {
-                bgcolor: 'rgba(37,99,235,0.4)',
-                color: 'rgba(255,255,255,0.7)',
+                bgcolor: 'rgba(176,141,87,0.4)',
+                color: 'rgba(10,10,10,0.7)',
               },
             }}
             startIcon={
@@ -146,7 +147,7 @@ const textFieldSx = {
     bgcolor: 'rgba(255,255,255,0.02)',
     '& fieldset': { borderColor: 'rgba(255,255,255,0.12)' },
     '&:hover fieldset': { borderColor: 'rgba(255,255,255,0.24)' },
-    '&.Mui-focused fieldset': { borderColor: '#2563EB' },
+    '&.Mui-focused fieldset': { borderColor: '#B08D57' },
   },
-  '& .MuiInputLabel-root.Mui-focused': { color: '#93C5FD' },
+  '& .MuiInputLabel-root.Mui-focused': { color: '#B08D57' },
 }

@@ -5,7 +5,7 @@ const gradientHero =
 export const landingTokens = {
   palette: {
     primaryText: '#FFFFFF',
-    accent: '#2563EB',
+    accent: '#B08D57',
     muted: '#A1A1AA',
     bodyBg: '#0A0A0A',
     onLightSurface: '#0A0A0A',
@@ -37,10 +37,8 @@ export const landingTokens = {
   
     footerMuted: 'rgba(255,255,255,0.6)',
     footerDivider: 'rgba(255,255,255,0.08)',
-  
-    headerNavLink: '#E4E4E7',
 
-    starAccent: '#FBBF24',
+    headerNavLink: '#E4E4E7',
   },
 
   gradients: {
@@ -48,7 +46,7 @@ export const landingTokens = {
     ctaBanner: 'linear-gradient(135deg, #0B0F14 0%, #0A0A0A 55%, #050505 100%)',
     soft: 'linear-gradient(180deg, #0A0A0A 0%, #0B0F14 100%)',
     heroGlow:
-      'radial-gradient(circle at 20% 20%, rgba(37,99,235,0.14), transparent 28%), radial-gradient(circle at 82% 30%, rgba(30,64,175,0.12), transparent 24%)',
+      'radial-gradient(circle at 20% 20%, rgba(176,141,87,0.14), transparent 28%), radial-gradient(circle at 82% 30%, rgba(139,109,65,0.12), transparent 24%)',
   },
 
   header: {
@@ -56,7 +54,7 @@ export const landingTokens = {
   },
 
   shadow: {
-    headerCta: '0 14px 34px rgba(30, 64, 175, 0.28)',
+    headerCta: '0 14px 34px rgba(139, 109, 65, 0.28)',
     heroAside: '0 20px 50px rgba(0,0,0,0.5)',
     aboutImg: '0 20px 50px rgba(0,0,0,0.45)',
     card: '0 20px 50px rgba(0,0,0,0.5)',

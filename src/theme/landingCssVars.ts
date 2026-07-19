@@ -12,7 +12,6 @@ export function getLandingCssVariables(theme: Theme): Record<string, string> {
     '--dn-muted': p.muted,
     '--dn-body-bg': p.bodyBg,
     '--dn-on-light-surface': p.onLightSurface,
-    '--dn-star': p.starAccent,
     '--dn-border': p.border,
     '--dn-success': p.success,
     '--dn-error': p.error,

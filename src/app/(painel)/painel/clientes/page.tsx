@@ -58,9 +58,10 @@ export default function ClientesPage() {
             variant="contained"
             startIcon={<AddRoundedIcon />}
             sx={{
-              bgcolor: '#2563EB',
+              bgcolor: '#B08D57',
+              color: '#0A0A0A',
               fontWeight: 600,
-              '&:hover': { bgcolor: '#1D4ED8' },
+              '&:hover': { bgcolor: '#8B6D41' },
             }}
           >
             Novo cliente

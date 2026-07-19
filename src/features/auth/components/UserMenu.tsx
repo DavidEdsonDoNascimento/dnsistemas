@@ -65,11 +65,11 @@ export default function UserMenu({ user }: UserMenuProps) {
             sx={{
               width: 34,
               height: 34,
-              bgcolor: 'rgba(37,99,235,0.18)',
-              color: '#93C5FD',
+              bgcolor: 'rgba(176,141,87,0.18)',
+              color: '#B08D57',
               fontSize: '0.85rem',
               fontWeight: 600,
-              border: '1px solid rgba(37,99,235,0.28)',
+              border: '1px solid rgba(176,141,87,0.28)',
             }}
           >
             {initials}

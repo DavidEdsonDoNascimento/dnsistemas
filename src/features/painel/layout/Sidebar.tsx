@@ -93,20 +93,20 @@ export default function Sidebar({ width, onNavigate }: SidebarProps) {
                 borderRadius: 1.5,
                 textDecoration: 'none',
                 color: active ? '#FFF' : '#A1A1AA',
-                bgcolor: active ? 'rgba(37,99,235,0.14)' : 'transparent',
+                bgcolor: active ? 'rgba(176,141,87,0.14)' : 'transparent',
                 border: '1px solid',
-                borderColor: active ? 'rgba(37,99,235,0.32)' : 'transparent',
+                borderColor: active ? 'rgba(176,141,87,0.32)' : 'transparent',
                 fontSize: '0.9rem',
                 fontWeight: active ? 600 : 500,
                 transition:
                   'background-color 140ms ease, color 140ms ease, border-color 140ms ease',
                 '&:hover': {
                   color: '#FFF',
-                  bgcolor: active ? 'rgba(37,99,235,0.18)' : 'rgba(255,255,255,0.04)',
+                  bgcolor: active ? 'rgba(176,141,87,0.18)' : 'rgba(255,255,255,0.04)',
                 },
               }}
             >
-              <Icon sx={{ fontSize: 20, color: active ? '#93C5FD' : 'inherit' }} />
+              <Icon sx={{ fontSize: 20, color: active ? '#B08D57' : 'inherit' }} />
               <span>{item.label}</span>
             </Box>
           )

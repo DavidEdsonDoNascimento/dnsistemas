@@ -21,6 +21,18 @@ O que **não** é papel do Claude aqui: decidir sozinho mudanças de escopo, arq
 
 ---
 
+## Onde ficam as instruções
+
+- **`CLAUDE.md`** (este arquivo) — processo de trabalho e cuidados do repositório. Vale para toda tarefa.
+- **`.claude/rules/`** — regras permanentes por assunto, carregadas automaticamente:
+  - `institutional-positioning.md` — como a ANTERO é apresentada (texto, microcopy, imagens).
+  - `visual-identity.md` — direção visual e decisões de identidade já tomadas.
+  - `frontend-guardrails.md` — invariantes de qualidade, SEO e assets (carrega ao mexer em `src/` ou `public/`).
+- **`.claude/skills/visual-identity-review/`** — procedimento de auditoria e troca de paleta. Acionar em tarefas de identidade visual.
+- **`docs/`** — documentação descritiva do que existe. Consultar conforme a regra 1 abaixo.
+
+---
+
 ## Regras obrigatórias antes de qualquer tarefa
 
 1. **Ler a documentação relevante antes de alterar arquivos.**
