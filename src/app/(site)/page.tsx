@@ -1,5 +1,7 @@
 import Script from 'next/script'
+import AboutOfficeVideo from '@/components/about/AboutOfficeVideo'
 import ContactForm from '@/components/contact-form'
+import HeroBackgroundVideo from '@/components/hero/HeroBackgroundVideo'
 import SiteHeader from '@/components/SiteHeader'
 import { getWhatsAppOrcamentoHref } from '@/lib/whatsapp-orcamento'
 import lc from '@/theme/landing.module.css'
@@ -139,6 +141,7 @@ export default function Home() {
           className={`hero section ${lc.landingHero}`}
           aria-labelledby="hero-title"
         >
+          <HeroBackgroundVideo />
           <div className={lc.landingHeroGlow} aria-hidden />
 
           <div className="container position-relative">
@@ -280,6 +283,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              <div className="col-lg-6">
+                <AboutOfficeVideo />
               </div>
             </div>
           </div>

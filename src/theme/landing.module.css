@@ -212,6 +212,44 @@
   opacity: 1;
 }
 
+.landingHeroVideoLayer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.landingHeroVideoEl {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0;
+  transition: opacity 800ms ease;
+}
+
+.landingHeroVideoElReady {
+  opacity: 1;
+}
+
+.landingHeroVideoOverlay {
+  position: absolute;
+  inset: 0;
+  background: var(--dn-gradient-hero-video-scrim);
+}
+
+@media (max-width: 767.98px) {
+  .landingHeroVideoOverlay {
+    background: var(--dn-gradient-hero-video-scrim-mobile);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landingHeroVideoEl {
+    transition: none;
+  }
+}
+
 .landingHeroLayout {
   --bs-gutter-x: clamp(20px, 2.8vw, 36px);
   --bs-gutter-y: 24px;
@@ -405,6 +443,50 @@
   border-radius: var(--dn-radius-lg);
   box-shadow: var(--dn-shadow-about-img);
   border: 1px solid var(--dn-border);
+}
+
+.landingAboutVideoFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--dn-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--dn-border);
+  border-top: 2px solid var(--dn-secondary);
+  box-shadow: var(--dn-shadow-about-img);
+}
+
+.landingAboutVideoFallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dn-service-card-bg);
+  color: var(--dn-secondary);
+  font-size: 2rem;
+  opacity: 0.55;
+}
+
+.landingAboutVideoEl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.94) brightness(0.95) contrast(1.03);
+  opacity: 0;
+  transition: opacity 700ms ease;
+}
+
+.landingAboutVideoElReady {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landingAboutVideoEl {
+    transition: none;
+  }
 }
 
 .landingAboutContent {

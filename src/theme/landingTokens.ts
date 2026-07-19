@@ -47,6 +47,10 @@ export const landingTokens = {
     soft: 'linear-gradient(180deg, #0A0A0A 0%, #0B0F14 100%)',
     heroGlow:
       'radial-gradient(circle at 20% 20%, rgba(176,141,87,0.14), transparent 28%), radial-gradient(circle at 82% 30%, rgba(139,109,65,0.12), transparent 24%)',
+    heroVideoScrim:
+      'linear-gradient(120deg, rgba(6,6,6,0.82) 0%, rgba(7,7,6,0.66) 42%, rgba(9,8,7,0.5) 68%, rgba(10,9,8,0.4) 100%), radial-gradient(circle at 82% 36%, rgba(139,109,65,0.09), transparent 46%)',
+    heroVideoScrimMobile:
+      'linear-gradient(180deg, rgba(6,6,6,0.78) 0%, rgba(7,7,6,0.64) 45%, rgba(9,8,7,0.56) 100%), radial-gradient(circle at 50% 22%, rgba(139,109,65,0.08), transparent 50%)',
   },
 
   header: {

@@ -19,6 +19,8 @@ export function getLandingCssVariables(theme: Theme): Record<string, string> {
     '--dn-gradient-soft': g.soft,
     '--dn-gradient-cta': g.ctaBanner,
     '--dn-gradient-glow': g.heroGlow,
+    '--dn-gradient-hero-video-scrim': g.heroVideoScrim,
+    '--dn-gradient-hero-video-scrim-mobile': g.heroVideoScrimMobile,
     '--dn-primary-dark': p.footerBg,
     '--dn-header-bg': p.headerBackdrop,
     '--dn-header-backdrop-filter': h.backdropFilter,

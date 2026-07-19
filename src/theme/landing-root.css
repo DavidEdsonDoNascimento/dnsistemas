@@ -21,6 +21,21 @@
       transparent 28%
     ),
     radial-gradient(circle at 82% 30%, rgba(139, 109, 65, 0.12), transparent 24%);
+  --dn-gradient-hero-video-scrim: linear-gradient(
+      120deg,
+      rgba(6, 6, 6, 0.82) 0%,
+      rgba(7, 7, 6, 0.66) 42%,
+      rgba(9, 8, 7, 0.5) 68%,
+      rgba(10, 9, 8, 0.4) 100%
+    ),
+    radial-gradient(circle at 82% 36%, rgba(139, 109, 65, 0.09), transparent 46%);
+  --dn-gradient-hero-video-scrim-mobile: linear-gradient(
+      180deg,
+      rgba(6, 6, 6, 0.78) 0%,
+      rgba(7, 7, 6, 0.64) 45%,
+      rgba(9, 8, 7, 0.56) 100%
+    ),
+    radial-gradient(circle at 50% 22%, rgba(139, 109, 65, 0.08), transparent 50%);
   --dn-primary-dark: #050505;
   --dn-header-bg: rgba(10, 10, 10, 0.88);
   --dn-header-backdrop-filter: blur(14px);
