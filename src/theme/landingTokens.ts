@@ -39,6 +39,12 @@ export const landingTokens = {
     footerDivider: 'rgba(255,255,255,0.08)',
 
     headerNavLink: '#E4E4E7',
+
+    ctaBg: '#111111',
+    ctaBgHover: '#1B1B1B',
+    ctaBgActive: '#141414',
+    ctaText: '#F5F5F5',
+    ctaBorderHover: '#C7A26A',
   },
 
   gradients: {
