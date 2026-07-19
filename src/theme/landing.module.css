@@ -265,6 +265,10 @@
   .landingHeroVideoOverlay {
     background: var(--dn-gradient-hero-video-scrim-mobile);
   }
+
+  .landingHeroVideoEl {
+    transform: translateY(-190px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -413,7 +417,11 @@
   padding: 14px 16px;
   border-radius: var(--dn-radius-md);
   border: 1px solid var(--dn-glass-border);
-  background: linear-gradient(180deg, rgba(11, 15, 20, 0.96), rgba(11, 15, 20, 0.9));
+  background: linear-gradient(
+    180deg,
+    rgba(11, 15, 20, 0.96),
+    rgba(11, 15, 20, 0.9)
+  );
   box-shadow: var(--dn-shadow-card);
 }
 
