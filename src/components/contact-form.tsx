@@ -10,6 +10,9 @@ type FormData = {
   message: string
 }
 
+const FALLBACK_ERROR_MESSAGE =
+  'Não foi possível enviar sua mensagem agora. Tente novamente em instantes ou use o WhatsApp.'
+
 const initialFormData: FormData = {
   name: '',
   email: '',
@@ -36,10 +39,12 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       })
 
-      const payload = (await response.json()) as { message?: string }
+      // Resposta sem JSON (ex.: erro de proxy) não deve virar mensagem técnica na tela.
+      const payload = (await response.json().catch(() => ({}))) as { message?: string }
 
       if (!response.ok) {
-        throw new Error(payload.message ?? 'Não foi possível enviar sua mensagem agora.')
+        setStatus({ type: 'error', message: payload.message ?? FALLBACK_ERROR_MESSAGE })
+        return
       }
 
       setStatus({
@@ -47,10 +52,9 @@ export default function ContactForm() {
         message: 'Recebido. Respondemos em até um dia útil com próximos passos.',
       })
       setFormData(initialFormData)
-    } catch (error) {
-      const message =
-        error instanceof Error ? error.message : 'Erro ao enviar. Tente novamente ou use outro canal.'
-      setStatus({ type: 'error', message })
+    } catch {
+      // Falha de rede: a mensagem do navegador ("Failed to fetch") não é exibida.
+      setStatus({ type: 'error', message: FALLBACK_ERROR_MESSAGE })
     } finally {
       setIsSubmitting(false)
     }
@@ -114,7 +118,10 @@ export default function ContactForm() {
 
       {status ? (
         <div className="col-md-12">
-          <p className={status.type === 'success' ? lc.formStatusOk : lc.formStatusErr}>
+          <p
+            className={status.type === 'success' ? lc.formStatusOk : lc.formStatusErr}
+            role={status.type === 'success' ? 'status' : 'alert'}
+          >
             {status.message}
           </p>
         </div>

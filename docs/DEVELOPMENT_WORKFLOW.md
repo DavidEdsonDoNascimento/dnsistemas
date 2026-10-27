@@ -95,7 +95,17 @@ npm run lint     # ESLint
 
 **Comportamento sem as envs do Supabase:** o `proxy.ts` tem um *fail-safe* — ele **não bloqueia** a navegação. Ou seja, o app sobe, mas a proteção do painel fica inativa. Não confunda "consegui abrir `/painel` em dev" com "a proteção está quebrada".
 
-**Sem as envs do Resend:** `/api/contact` retorna HTTP 500 com a mensagem listando as variáveis faltantes.
+**Sem as envs do Resend:** `/api/contact` retorna HTTP 500 e registra no log do servidor as variáveis faltantes. Em `npm run dev` a mensagem na tela também lista os nomes; em produção (`NODE_ENV=production`, inclusive `npm run start` local) o visitante vê só a mensagem genérica de falha. O envio é feito pela **API HTTP do Resend** — não há SMTP no projeto.
+
+**Formato das envs do formulário** (todas server-side, sem `NEXT_PUBLIC_`):
+
+| Variável | Formato |
+|---|---|
+| `RESEND_API_KEY` | chave de API do Resend (`re_...`) |
+| `MAIL_FROM` | `Nome <endereco@dominio>` ou só o endereço; o domínio precisa estar verificado no Resend (`onboarding@resend.dev` só entrega para o e-mail dono da conta) |
+| `MAIL_TO` | um único endereço que recebe os contatos |
+
+Depois de criar ou alterar `.env.local`, reiniciar o `npm run dev` — as envs são lidas na inicialização.
 
 ⚠ **Nunca commitar `.env` ou `.env.local`.**
 

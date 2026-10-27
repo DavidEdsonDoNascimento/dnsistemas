@@ -159,7 +159,7 @@ src/
 | `NEXT_PUBLIC_SUPABASE_URL` | projeto Supabase |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | chave anônima Supabase |
 
-`/api/contact` valida a presença das três primeiras e retorna 500 com mensagem explícita se faltarem.
+`/api/contact` valida a presença das três primeiras e retorna 500 se faltarem: os nomes vão para o log do servidor (e para a tela só em desenvolvimento); em produção o visitante recebe mensagem genérica. As três são lidas apenas no servidor.
 
 ---
 

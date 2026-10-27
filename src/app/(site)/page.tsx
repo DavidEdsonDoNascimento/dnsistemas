@@ -2,7 +2,9 @@ import Script from 'next/script'
 import AboutOfficeVideo from '@/components/about/AboutOfficeVideo'
 import ContactForm from '@/components/contact-form'
 import HeroBackgroundVideo from '@/components/hero/HeroBackgroundVideo'
+import ProjectsSection from '@/components/projects/ProjectsSection'
 import SiteHeader from '@/components/SiteHeader'
+import TechnicalLeadSection from '@/components/technical-lead/TechnicalLeadSection'
 import { getWhatsAppOrcamentoHref } from '@/lib/whatsapp-orcamento'
 import lc from '@/theme/landing.module.css'
 
@@ -244,14 +246,15 @@ export default function Home() {
                   <span className={lc.landingEyebrow}>Empresa de software no Brasil</span>
 
                   <h2 id="about-title" className={lc.landingHeading2Tight}>
-                    Fábrica de software com time sênior e escopo transparente.
+                    Engenharia de software com experiência sênior e escopo transparente.
                   </h2>
 
                   <p className={lc.landingParagraph}>
                     A ANTERO Sistemas é uma empresa de desenvolvimento de software personalizado
-                    sediada em Santa Catarina, atendendo empresas em todo o Brasil. Trabalhamos com
-                    times de engenharia sênior para resolver problemas reais: reduzir planilhas
-                    paralelas, eliminar erro manual e dar rastreabilidade a processos críticos.
+                    sediada em Santa Catarina, atendendo empresas em todo o Brasil. Atuamos com
+                    engenharia de software de nível sênior para resolver problemas reais: reduzir
+                    planilhas paralelas, eliminar erro manual e dar rastreabilidade a processos
+                    críticos.
                   </p>
 
                   <p className={lc.landingParagraphLoose}>
@@ -361,6 +364,8 @@ export default function Home() {
           </div>
         </section>
 
+        <ProjectsSection />
+
         {/* Como funciona */}
         <section
           id="como-funciona"
@@ -407,8 +412,8 @@ export default function Home() {
                   <span className={lc.landingStepNumber}>03</span>
                   <h3 className={lc.landingServiceTitle}>Desenvolvimento por marcos</h3>
                   <p className={lc.landingParagraphNoMargin}>
-                    Entregas funcionais a cada 2 semanas. Você usa, valida e prioriza junto com o
-                    time de engenharia.
+                    Entregas funcionais a cada 2 semanas. Você usa, valida e prioriza junto com a
+                    engenharia responsável pelo projeto.
                   </p>
                 </article>
               </div>
@@ -426,6 +431,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <TechnicalLeadSection />
 
         {/* Para quem */}
         <section
@@ -644,7 +651,7 @@ export default function Home() {
                   <h3 className={lc.landingServiceTitle}>Produto digital</h3>
                   <p className={lc.landingParagraphNoMargin}>
                     Software para vender ao mercado, com discovery, MVP, validação com
-                    clientes-piloto e roadmap de evolução. Trabalhamos como time de engenharia e
+                    clientes-piloto e roadmap de evolução. Atuamos com visão de engenharia e de
                     produto.
                   </p>
                 </article>
@@ -676,7 +683,7 @@ export default function Home() {
                 </div>
                 <div className="col-lg-4 text-lg-end">
                   <a href="#contact" className={`btn ${lc.landingRibbonBtn}`}>
-                    Agendar análise
+                    Solicitar análise
                   </a>
                 </div>
               </div>

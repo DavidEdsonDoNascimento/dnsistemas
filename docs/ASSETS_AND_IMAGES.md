@@ -30,9 +30,10 @@ Esta é a lista **completa** do que a varredura encontrou sendo usado:
 | `/favicon.ico` | `src/app/layout.tsx` (`icon` e `shortcut`) |
 | `/assets/img/illustration/illustration-14.webp` | `src/app/(site)/page.tsx:228` — ilustração do **hero** |
 | `/assets/img/about/about-square-8.webp` | `src/app/(site)/page.tsx:252` — seção **about** |
+| `/eu.jpeg` | `src/components/technical-lead/TechnicalLeadSection.tsx` — **retrato real de David Nascimento** (1024×1536), recortado em quadrado via CSS na seção `#responsavel-tecnico` |
 | ⚠ `/antero_logo_header_croppezd.png` | `src/components/Header/index.tsx:22` — **referência quebrada** (ver §4) |
 
-**Conclusão importante:** de todas as imagens do repositório, apenas **cinco** estão realmente em uso na aplicação. Todo o resto é template não utilizado ou material preparado para uso futuro.
+**Conclusão importante:** de todas as imagens do repositório, apenas **seis** estão realmente em uso na aplicação. Todo o resto é template não utilizado ou material preparado para uso futuro.
 
 ---
 
