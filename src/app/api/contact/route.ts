@@ -10,6 +10,8 @@ type ContactPayload = {
 
 const requiredEnvVars = ['RESEND_API_KEY', 'MAIL_FROM', 'MAIL_TO'] as const
 
+const SEND_FAILURE_MESSAGE = 'Não foi possível enviar a mensagem. Tente novamente em instantes.'
+
 const escapeHtml = (value: string) =>
   value
     .replaceAll('&', '&amp;')
@@ -19,7 +21,13 @@ const escapeHtml = (value: string) =>
     .replaceAll("'", '&#039;')
 
 export async function POST(request: Request) {
-  const body = (await request.json()) as ContactPayload
+  let body: ContactPayload
+  try {
+    body = (await request.json()) as ContactPayload
+  } catch {
+    return NextResponse.json({ message: 'Dados do formulário inválidos.' }, { status: 400 })
+  }
+
   const name = body.name?.trim()
   const email = body.email?.trim()
   const subject = body.subject?.trim()
@@ -29,10 +37,18 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: 'Preencha todos os campos.' }, { status: 400 })
   }
 
+  // Só os nomes das variáveis ausentes vão para o log do servidor; em produção o
+  // visitante recebe a mensagem genérica, sem detalhes de configuração.
   const missingEnv = requiredEnvVars.filter((key) => !process.env[key])
   if (missingEnv.length > 0) {
+    console.error(`[api/contact] Configuração de e-mail incompleta: ${missingEnv.join(', ')}`)
     return NextResponse.json(
-      { message: `Configuracao de email incompleta: ${missingEnv.join(', ')}` },
+      {
+        message:
+          process.env.NODE_ENV === 'production'
+            ? SEND_FAILURE_MESSAGE
+            : `Configuração de e-mail incompleta: ${missingEnv.join(', ')}. Defina-as em .env.local.`,
+      },
       { status: 500 },
     )
   }
@@ -57,10 +73,7 @@ export async function POST(request: Request) {
 
   if (error) {
     console.error('Erro ao enviar e-mail de contato (Resend):', error)
-    return NextResponse.json(
-      { message: 'Nao foi possivel enviar a mensagem. Tente novamente em instantes.' },
-      { status: 500 },
-    )
+    return NextResponse.json({ message: SEND_FAILURE_MESSAGE }, { status: 500 })
   }
 
   return NextResponse.json({ message: 'Mensagem enviada com sucesso.' })
