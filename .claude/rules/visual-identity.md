@@ -33,15 +33,19 @@ entregar azul como default (foco, `--bs-primary`, `--bs-link-color`, ripple,
 seleção), adaptar para a nova identidade sempre que possível. "É o padrão da
 biblioteca" não é justificativa para manter.
 
-## 2. Estado atual do repositório (fato verificado, 18/07/2026)
+## 2. Estado atual do repositório (fato verificado, 27/10/2026)
 
-A paleta implementada **ainda é a azul**. `src/theme/landingTokens.ts:8` define
-`accent: '#2563EB'`. A identidade descrita nesta regra é o **alvo**, não o que
-está no código.
+A troca **já foi executada** (commit `beeb0de`, "mudança de azul para ouro na
+identidade visual"). A identidade válida é a implementada hoje:
 
-**Executar a troca exige tarefa própria e aprovação explícita.** Até lá, não
-alterar cor de nenhum arquivo. Quando a tarefa vier, usar a skill
-`visual-identity-review`, que traz o mapeamento dos pontos afetados.
+- `src/theme/landingTokens.ts` define `accent: '#B08D57'` (ouro fosco), exposto
+  como `--dn-secondary`, sobre base escura (`bodyBg: '#0A0A0A'`).
+- Botões: fundo escuro (`ctaBg: '#111111'`), texto claro e borda no accent;
+  hover com `ctaBorderHover: '#C7A26A'` (ver `docs/tasks/009_update_buttons.md`).
+- Nenhum hex azul permanece em `src/` (fora de `src/assets/vendor/`).
+
+**Não voltar para a paleta azul.** Mudanças adicionais de cor continuam exigindo
+tarefa própria e aprovação explícita; usar a skill `visual-identity-review`.
 
 ## 3. Princípios
 

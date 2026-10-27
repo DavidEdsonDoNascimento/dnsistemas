@@ -41,24 +41,28 @@ Proteção: `src/proxy.ts` (matcher `['/painel/:path*', '/login']`) redireciona 
 
 ## 2. Seções da landing page (na ordem real de renderização)
 
-Todas dentro de `src/app/(site)/page.tsx`. Cada seção tem `id` e `aria-labelledby` — a acessibilidade foi tratada deliberadamente.
+Todas renderizadas por `src/app/(site)/page.tsx`. Cada seção tem `id` e `aria-labelledby` — a acessibilidade foi tratada deliberadamente. As seções `projetos` e `responsavel-tecnico` são componentes próprios (Server Components) importados pela página.
 
-| # | `id` | Título (H1/H2 real) | Linha aprox. |
+| # | `id` | Título (H1/H2 real) | Onde |
 |---|---|---|---|
-| — | — | `<SiteHeader />` — cabeçalho fixo | 134 |
-| 1 | `hero` | **H1:** "Desenvolvimento de software personalizado para empresas em Santa Catarina e…" + 2 CTAs (orçamento / serviços) + ilustração | 137 |
-| 2 | `about` | "Fábrica de software com time sênior e escopo transparente." | 242 |
-| 3 | `services` | "Serviços de desenvolvimento de sistemas sob medida para empresas" | 310 |
-| 4 | `como-funciona` | "Como funciona o desenvolvimento de software personalizado na ANTERO" | 380 |
-| 5 | `para-quem` | "Quais empresas precisam de automação de processos e sistemas sob medida" | 446 |
-| 6 | `beneficios` | "Benefícios de um sistema personalizado para a sua empresa" | 540 |
-| 7 | `investimento` | "Quanto custa um sistema sob medida para empresa" | 618 |
-| 8 | *(sem id)* | CTA intermediário — `aria-label="Próximos passos"` | 679 |
-| 9 | `faq` | "Perguntas frequentes sobre desenvolvimento de software sob medida" | 703 |
-| 10 | `contact` | "Solicite um orçamento de software personalizado" + formulário + CTA de WhatsApp | 740 |
-| 11 | `footer` | Rodapé | 806 |
+| — | — | `<SiteHeader />` — cabeçalho fixo | `page.tsx` ~139 |
+| 1 | `hero` | **H1:** "Desenvolvimento de software personalizado para empresas em Santa Catarina e…" + 2 CTAs (orçamento / serviços) + ilustração | `page.tsx` ~142 |
+| 2 | `about` | "Engenharia de software com experiência sênior e escopo transparente." | `page.tsx` ~238 |
+| 3 | `services` | "Serviços de desenvolvimento de sistemas sob medida para empresas" | `page.tsx` ~298 |
+| 4 | `projetos` | "Projetos e soluções desenvolvidas" — cases (hoje: Plataforma de Gestão de Pedidos) | `src/components/projects/ProjectsSection.tsx` |
+| 5 | `como-funciona` | "Como funciona o desenvolvimento de software personalizado na ANTERO" | `page.tsx` ~370 |
+| 6 | `responsavel-tecnico` | "Experiência de engenharia por trás de cada solução." — responsável técnico + link para o portfólio | `src/components/technical-lead/TechnicalLeadSection.tsx` |
+| 7 | `para-quem` | "Quais empresas precisam de automação de processos e sistemas sob medida" | `page.tsx` ~438 |
+| 8 | `beneficios` | "Benefícios de um sistema personalizado para a sua empresa" | `page.tsx` ~532 |
+| 9 | `investimento` | "Quanto custa um sistema sob medida para empresa" | `page.tsx` ~610 |
+| 10 | *(sem id)* | CTA intermediário — `aria-label="Próximos passos"` (botão "Solicitar análise") | `page.tsx` ~670 |
+| 11 | `faq` | "Perguntas frequentes sobre desenvolvimento de software sob medida" | `page.tsx` ~695 |
+| 12 | `contact` | "Solicite um orçamento de software personalizado" + formulário + CTA de WhatsApp | `page.tsx` ~732 |
+| 13 | `footer` | Rodapé | `page.tsx` ~797 |
 
-**No final da página** (linhas 822-830):
+**Cases de projetos:** os dados ficam em `src/components/projects/projects-data.ts` (tipo `ProjectCase`). Para publicar um novo case, adicionar um item em `PROJECTS`; se tiver ilustração própria, registrar a chave em `ProjectVisual` e o componente em `ProjectCaseCard.tsx`. Ilustrações são conceituais, com dados fictícios — nunca capturas reais.
+
+**No final da página** (linhas ~812-821):
 - `<Script id="ld-json-organization">` — JSON-LD de `Organization` para o Google.
 - `<Script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" strategy="afterInteractive" />`
 - `<Script src="/assets/js/main.js" strategy="afterInteractive" />` — JS do template original.
@@ -76,11 +80,15 @@ Todas dentro de `src/app/(site)/page.tsx`. Cada seção tem `id` e `aria-labelle
        │                        ├── CTA primário  → orçamento (WhatsApp)
        │                        └── CTA secundário → âncora #services
        ▼
-     ABOUT ───────────►  credibilidade (time sênior, escopo transparente)
+     ABOUT ───────────►  credibilidade (experiência sênior, escopo transparente)
        ▼
      SERVICES ────────►  o que é oferecido
        ▼
+     PROJETOS ────────►  prova: case real + CTA "Conversar sobre meu projeto" → #contact
+       ▼
      COMO-FUNCIONA ───►  o processo, para reduzir a percepção de risco
+       ▼
+     RESPONSÁVEL TÉC. ►  quem conduz a engenharia + link para o portfólio (nova aba)
        ▼
      PARA-QUEM ───────►  o visitante se reconhece
        ▼

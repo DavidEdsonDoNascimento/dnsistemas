@@ -51,6 +51,28 @@
   }
 }
 
+/* Em exatamente 1200px o `@media (max-width: 1200px)` legado (main.css) ainda vale e
+   dá `order: 3` ao .navmenu, jogando o CTA para antes do menu. Especificidade maior
+   mantém a ordem logo → menu → CTA também nessa largura. */
+:global(.header) :global(.navmenu).landingDesktopNav {
+  order: 2;
+}
+
+:global(.header) :global(.btn-getstarted).landingHeaderCta {
+  order: 3;
+}
+
+/* Com 8 itens, a faixa 1200–1299px fica justa: reduz o respiro lateral dos links. */
+@media (min-width: 1200px) and (max-width: 1299.98px) {
+  .landingDesktopNav > ul > li {
+    padding-inline: 10px;
+  }
+
+  .landingDesktopNav > ul > li:last-child {
+    padding-right: 0;
+  }
+}
+
 .landingMobileToggle {
   order: 99;
   display: inline-flex;

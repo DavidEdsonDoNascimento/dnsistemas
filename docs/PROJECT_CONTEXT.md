@@ -105,6 +105,7 @@ O histórico de commits confirma a sequência: primeiro a estrutura do painel co
 4. **E-mail institucional real** para `MAIL_FROM` / `MAIL_TO` — hoje só há placeholder. *Necessita confirmação humana.*
 5. **Dados institucionais para SEO local** (endereço, CNPJ, horário) — o JSON-LD atual é de `Organization`; um `LocalBusiness` exigiria dados reais. *Necessita confirmação humana.*
 6. **Verificação do Google Search Console:** o campo `verification.google` está comentado em `src/app/layout.tsx`, aguardando token. *Necessita confirmação humana.*
+7. **Telefone no JSON-LD × WhatsApp do site:** o JSON-LD de `src/app/(site)/page.tsx` (`Organization.contactPoint` e `LocalBusiness`) usa `+55 47 99682-4402`, enquanto o WhatsApp do site (`src/lib/whatsapp-orcamento.ts`) usa `+55 47 99701-1323`. Qual é o correto **necessita confirmação humana antes do deploy** — não alterar por suposição.
 
 ---
 
