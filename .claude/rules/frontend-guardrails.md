@@ -75,7 +75,7 @@ conteúdo, isso é **outra tarefa**: parar e reportar.
 - **Não apagar** `src/assets/` nem `public/assets/`. São duplicatas **ambas em
   uso**, por caminhos diferentes — import vs. URL (`docs/ASSETS_AND_IMAGES.md` §5).
   Editar imagem em `src/assets/img/` **não muda** o que a landing exibe.
-- **Apenas cinco imagens estão de fato em uso** na aplicação. O restante é
+- **Apenas seis imagens estão de fato em uso** na aplicação. O restante é
   template não utilizado ou material preparado para o futuro. Não presumir que
   uma imagem presente está publicada.
 - **Extensões `.PNG` maiúsculas** em `public/images/`: em produção Linux o

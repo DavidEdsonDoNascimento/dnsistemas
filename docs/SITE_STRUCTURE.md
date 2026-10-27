@@ -51,7 +51,7 @@ Todas renderizadas por `src/app/(site)/page.tsx`. Cada seção tem `id` e `aria-
 | 3 | `services` | "Serviços de desenvolvimento de sistemas sob medida para empresas" | `page.tsx` ~298 |
 | 4 | `projetos` | "Projetos e soluções desenvolvidas" — cases (hoje: Plataforma de Gestão de Pedidos) | `src/components/projects/ProjectsSection.tsx` |
 | 5 | `como-funciona` | "Como funciona o desenvolvimento de software personalizado na ANTERO" | `page.tsx` ~370 |
-| 6 | `responsavel-tecnico` | "Experiência de engenharia por trás de cada solução." — responsável técnico + link para o portfólio | `src/components/technical-lead/TechnicalLeadSection.tsx` |
+| 6 | `responsavel-tecnico` | "Experiência de engenharia por trás de cada solução." — responsável técnico (retrato `/eu.jpeg`) + link para o portfólio | `src/components/technical-lead/TechnicalLeadSection.tsx` |
 | 7 | `para-quem` | "Quais empresas precisam de automação de processos e sistemas sob medida" | `page.tsx` ~438 |
 | 8 | `beneficios` | "Benefícios de um sistema personalizado para a sua empresa" | `page.tsx` ~532 |
 | 9 | `investimento` | "Quanto custa um sistema sob medida para empresa" | `page.tsx` ~610 |

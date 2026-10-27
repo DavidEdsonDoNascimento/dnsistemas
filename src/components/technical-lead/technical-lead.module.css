@@ -77,7 +77,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Cartão de perfil com monograma (sem fotografia).
+   Cartão de perfil com retrato.
    -------------------------------------------------------------------------- */
 .profileCard {
   position: relative;
@@ -98,57 +98,62 @@
   padding: clamp(24px, 3vw, 32px);
   border-bottom: 1px solid var(--dn-border);
   border-radius: var(--dn-radius-xl) var(--dn-radius-xl) 0 0;
-  /* Grade discreta de "planta técnica" atrás do monograma. */
+  /* Grade discreta de "planta técnica" atrás do retrato. */
   background-image:
     linear-gradient(var(--dn-glass-border-weak) 1px, transparent 1px),
     linear-gradient(90deg, var(--dn-glass-border-weak) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
-.monogram {
+/* Retrato: recorte quadrado do rosto a partir de /eu.jpeg (1024×1536).
+   A imagem é ampliada e deslocada em % do quadro — o recorte acompanha
+   qualquer tamanho de .portrait sem distorcer. */
+.portrait {
   position: relative;
   flex-shrink: 0;
-  display: grid;
-  grid-auto-flow: column;
-  place-content: center;
-  width: 88px;
-  height: 88px;
+  width: 96px;
+  height: 96px;
+  overflow: hidden;
   border: 1px solid var(--dn-glass-border-ghost);
   border-radius: var(--dn-radius-md);
   background: var(--dn-body-bg);
-  color: var(--dn-primary);
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: -0.06em;
-  line-height: 1;
+  box-shadow: var(--dn-shadow-card);
 }
 
-.monogram::before,
-.monogram::after {
+.portraitImage {
+  position: absolute;
+  top: -11%;
+  left: -37.1%;
+  width: 155.2%;
+  max-width: none;
+  height: auto;
+}
+
+/* Cantoneiras douradas — mesmo acabamento de "planta técnica" do cabeçalho. */
+.portrait::before,
+.portrait::after {
   content: '';
   position: absolute;
+  z-index: 1;
   width: 14px;
   height: 14px;
   border-color: var(--dn-secondary);
   border-style: solid;
+  pointer-events: none;
 }
 
-.monogram::before {
-  top: -1px;
-  left: -1px;
+.portrait::before {
+  top: 0;
+  left: 0;
   border-width: 1.5px 0 0 1.5px;
   border-top-left-radius: var(--dn-radius-md);
 }
 
-.monogram::after {
-  right: -1px;
-  bottom: -1px;
+.portrait::after {
+  right: 0;
+  bottom: 0;
   border-width: 0 1.5px 1.5px 0;
   border-bottom-right-radius: var(--dn-radius-md);
-}
-
-.monogramAccent {
-  color: var(--dn-secondary);
 }
 
 .profileName {
@@ -197,9 +202,8 @@
     gap: 16px;
   }
 
-  .monogram {
-    width: 72px;
-    height: 72px;
-    font-size: 1.65rem;
+  .portrait {
+    width: 80px;
+    height: 80px;
   }
 }

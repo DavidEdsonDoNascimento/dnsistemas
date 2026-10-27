@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import lc from '@/theme/landing.module.css'
 import s from './technical-lead.module.css'
 
@@ -79,9 +80,15 @@ export default function TechnicalLeadSection() {
 
           <aside className={s.profileCard} aria-label="Perfil do responsável técnico">
             <div className={s.profileHead}>
-              <div className={s.monogram} aria-hidden>
-                <span>D</span>
-                <span className={s.monogramAccent}>N</span>
+              <div className={s.portrait}>
+                <Image
+                  src="/eu.jpeg"
+                  alt="Retrato de David Nascimento"
+                  width={1024}
+                  height={1536}
+                  sizes="160px"
+                  className={s.portraitImage}
+                />
               </div>
               <div>
                 <p className={s.profileName}>David Nascimento</p>
